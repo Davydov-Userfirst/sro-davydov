@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Денис Давыдов — управление рисками</title>
+<meta name="description" content="Денис Давыдов — управление рисками, банковское дело, кредитные процессы, цифровая трансформация. Более 20 лет в банковском секторе.">
+<meta name="theme-color" content="#25272b">
+<meta property="og:title" content="Денис Давыдов — управление рисками">
+<meta property="og:description" content="Управление рисками | Банковское дело | Реструктуризация | Корпоративные финансы | Цифровая трансформация. 20+ лет в банковском секторе.">
+<meta property="og:type" content="profile">
+<link rel="canonical" href="/ru/">
+<link rel="alternate" hreflang="ru" href="/ru/">
+<link rel="alternate" hreflang="en" href="/en/">
+<link rel="alternate" hreflang="x-default" href="/ru/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+:root{
+  --paper:#ffffff; --alt:#f6f7f9; --card:#ffffff;
+  --ink:#222428; --graphite:#4a4b4d; --graphite-mid:#6e6f71; --graphite-lt:#9a9b9e;
+  --rule:#e4e6ea;
+  --coral:#ee5a52; --coral-deep:#d9433b; --coral-line:rgba(238,90,82,.26); --coral-wash:rgba(238,90,82,.06);
+  --dark:#25272b; --dark-rule:rgba(255,255,255,.14);
+  --on-dark:#f5f6f7; --on-dark-mid:#c7cbd2; --on-dark-dim:#9ba0a8;
+  --accent-dark:#ff8074;
+  --shadow:0 1px 2px rgba(34,36,40,.05), 0 12px 28px -18px rgba(34,36,40,.28);
+  --mono:"DM Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --sans:"Manrope", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif;
+  --portrait:url(../assets/portrait.webp);
+  --max:1080px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#17191c; --alt:#1e2023; --card:#1e2023;
+    --ink:#ecedf0; --graphite:#c3c6cb; --graphite-mid:#a1a5ab; --graphite-lt:#82868d;
+    --rule:#2d3035;
+    --coral:#ff7f73; --coral-deep:#ff9186; --coral-line:rgba(255,127,115,.32); --coral-wash:rgba(255,127,115,.09);
+    --dark:#101215; --dark-rule:rgba(255,255,255,.12);
+    --accent-dark:#ff9186;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 32px -20px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#17191c; --alt:#1e2023; --card:#1e2023;
+  --ink:#ecedf0; --graphite:#c3c6cb; --graphite-mid:#a1a5ab; --graphite-lt:#82868d;
+  --rule:#2d3035;
+  --coral:#ff7f73; --coral-deep:#ff9186; --coral-line:rgba(255,127,115,.32); --coral-wash:rgba(255,127,115,.09);
+  --dark:#101215; --dark-rule:rgba(255,255,255,.12);
+  --accent-dark:#ff9186;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 32px -20px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{margin:0; text-wrap:balance; letter-spacing:-.02em; font-weight:800; line-height:1.14}
+p{margin:0}
+a{color:inherit}
+ul{margin:0; padding:0; list-style:none}
+:focus-visible{outline:2px solid var(--coral); outline-offset:3px; border-radius:4px}
+
+.wrap{width:100%; max-width:var(--max); margin:0 auto; padding-inline:20px}
+.section{padding-block:clamp(44px,7vw,84px)}
+.section--alt{background:var(--alt); border-block:1px solid var(--rule)}
+
+.kicker{
+  font-family:var(--sans); font-weight:600; font-size:11.5px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--coral-deep); margin-bottom:14px;
+  display:flex; align-items:center; gap:10px;
+}
+.kicker::after{content:""; flex:1; height:1px; background:var(--coral-line); max-width:120px}
+.h2{font-size:clamp(25px,3.4vw,36px)}
+.lead{margin-top:14px; max-width:62ch; color:var(--graphite-mid); font-size:16.5px}
+
+/* ---------- top bar ---------- */
+.bar{
+  position:sticky; top:env(safe-area-inset-top, 0px); z-index:40;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.bar__in{display:flex; align-items:center; gap:18px; min-height:54px}
+.bar__name{font-weight:800; font-size:15px; letter-spacing:-.01em; margin-right:auto}
+.bar__name span{color:var(--coral)}
+.bar__nav{display:flex; gap:18px; font-size:13.5px; color:var(--graphite-mid)}
+.bar__nav a{text-decoration:none}
+.bar__nav a:hover{color:var(--coral-deep)}
+@media (max-width:860px){ .bar__nav{display:none} }
+
+.langs{display:flex; align-items:center; border:1px solid var(--rule); border-radius:9px; overflow:hidden; flex:none}
+.langs a, .langs button{
+  font-family:var(--sans); font-weight:700; font-size:12.5px; letter-spacing:.06em;
+  padding:7px 11px; border:0; background:transparent; color:var(--graphite-mid);
+  text-decoration:none; cursor:pointer; line-height:1;
+}
+.langs a + a, .langs button + button{border-left:1px solid var(--rule)}
+.langs .is-on{background:var(--coral); color:#fff}
+.langs a:not(.is-on):hover, .langs button:not(.is-on):hover{color:var(--coral-deep); background:var(--coral-wash)}
+
+/* ---------- hero ---------- */
+.hero{position:relative; background:var(--dark); color:var(--on-dark); overflow:hidden; isolation:isolate}
+.hero__bg{position:absolute; inset:0; z-index:0; pointer-events:none}
+.hero__bg svg{width:100%; height:100%; display:block}
+.hero__bg::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(100deg, var(--dark) 6%, rgba(37,39,43,.86) 34%, rgba(37,39,43,.25) 58%, transparent 74%);
+}
+.hero__glow{
+  position:absolute; z-index:0; width:min(620px,80vw); aspect-ratio:1; right:-12%; top:-18%;
+  background:radial-gradient(circle, rgba(238,90,82,.24), rgba(238,90,82,0) 66%); pointer-events:none;
+}
+.hero__in{
+  position:relative; z-index:2;
+  display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:clamp(20px,4vw,56px);
+  align-items:end; padding-block:clamp(40px,6vw,66px) 0;
+}
+.hero h1{font-size:clamp(38px,7.2vw,68px); letter-spacing:-.035em}
+.hero__role{
+  display:flex; flex-wrap:wrap; gap:4px 12px; margin-top:20px; max-width:52ch;
+  font-size:clamp(14.5px,1.7vw,16.5px); font-weight:600; line-height:1.5; color:var(--on-dark);
+}
+.hero__role li{display:flex; align-items:baseline; gap:12px}
+.hero__role li:not(:last-child)::after{content:"|"; color:var(--accent-dark); font-weight:500; opacity:.85}
+.hero__sum{margin-top:20px; color:var(--on-dark-mid); max-width:54ch; font-size:15.5px}
+.hero__facts{display:flex; flex-wrap:wrap; gap:8px; margin-top:24px}
+.fact{
+  font-family:var(--sans); font-size:12.5px; font-weight:500; color:var(--on-dark-mid);
+  border:1px solid var(--dark-rule); border-radius:999px; padding:6px 13px; background:rgba(255,255,255,.04);
+}
+.hero__cta{display:flex; flex-wrap:wrap; gap:10px 12px; align-items:center; margin-top:26px; padding-bottom:clamp(34px,5vw,56px)}
+.hero__portrait{position:relative; align-self:end; margin-bottom:-1px}
+.portrait{
+  width:100%; aspect-ratio:800 / 1466; max-width:100%;
+  background:var(--portrait) center bottom / contain no-repeat;
+  filter:drop-shadow(0 26px 50px rgba(0,0,0,.55));
+}
+.hero__portrait::before{
+  content:""; position:absolute; inset:auto 6% 0 6%; height:62%; z-index:-1;
+  background:linear-gradient(to top, rgba(238,90,82,.10), transparent);
+  border-radius:50% 50% 0 0 / 22% 22% 0 0;
+}
+.hero__band{position:relative; z-index:2; border-top:1px solid var(--dark-rule); background:rgba(0,0,0,.2)}
+.hero__formulas{
+  display:flex; gap:10px 28px; flex-wrap:wrap; padding-block:13px;
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.02em; color:rgba(255,255,255,.42);
+}
+.hero__formulas span{white-space:nowrap}
+.hero__formulas i{font-style:normal; color:var(--accent-dark)}
+@media (max-width:860px){
+  .hero__in{grid-template-columns:minmax(0,1fr); align-items:start}
+  .hero__portrait{max-width:250px; margin-inline:auto; margin-top:-10px}
+  .hero__cta{padding-bottom:26px}
+  .hero__formulas{font-size:11px; gap:8px 20px}
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex; align-items:center; gap:9px; cursor:pointer;
+  font-family:var(--sans); font-size:14.5px; font-weight:600; line-height:1;
+  padding:12px 18px; border-radius:10px; border:1px solid transparent; text-decoration:none;
+  transition:transform .14s ease, background-color .14s ease, border-color .14s ease, color .14s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:17px; height:17px; flex:none; fill:currentColor}
+.btn--primary{background:var(--coral); color:#fff}
+.btn--primary:hover{background:var(--coral-deep)}
+.btn--cv{
+  font-size:16.5px; font-weight:700; padding:16px 26px; border-radius:12px; letter-spacing:-.01em;
+  box-shadow:0 12px 28px -14px rgba(238,90,82,.75);
+}
+.btn--cv svg{width:20px; height:20px}
+.btn--outline{border-color:var(--accent-dark); color:var(--accent-dark); background:transparent}
+.btn--outline:hover{background:var(--accent-dark); color:#1b1d20}
+.btn--ghost-dark{border-color:var(--dark-rule); color:var(--on-dark); background:rgba(255,255,255,.05)}
+.btn--ghost-dark:hover{border-color:var(--accent-dark); color:#fff}
+
+/* ---------- metrics ---------- */
+.metrics{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; background:var(--rule);
+  border:1px solid var(--rule); border-radius:14px; overflow:hidden; margin-top:30px}
+.metric{background:var(--card); padding:22px 20px 20px; display:flex; flex-direction:column; gap:8px}
+.metric__label{font-family:var(--sans); font-weight:600; font-size:11.5px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--graphite-lt)}
+.metric__value{
+  font-size:clamp(30px,4vw,40px); font-weight:800; letter-spacing:-.04em; line-height:1;
+  font-variant-numeric:tabular-nums; color:var(--ink);
+}
+.metric__value b{color:var(--coral); font-weight:800}
+.metric__value .u{font-size:.6em}
+.metric__value .u2{font-size:.5em; font-weight:700}
+.metric__value .u3{font-size:.42em; font-weight:700}
+.metric__note{font-size:13.5px; color:var(--graphite-mid); line-height:1.45}
+.metric__delta{
+  font-family:var(--mono); font-size:11.5px; color:var(--graphite-lt);
+  display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-top:auto; padding-top:8px;
+}
+.metric__delta s{text-decoration:line-through; text-decoration-color:var(--coral-line)}
+.metric__delta i{font-style:normal; color:var(--coral-deep)}
+@media (max-width:860px){ .metrics{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:520px){ .metrics{grid-template-columns:minmax(0,1fr)} }
+
+/* ---------- experience ---------- */
+.jobs{margin-top:34px; display:flex; flex-direction:column}
+.job{display:grid; grid-template-columns:210px minmax(0,1fr); gap:clamp(16px,3vw,40px);
+  padding-block:30px; border-top:1px solid var(--rule)}
+.job:first-child{border-top:2px solid var(--ink)}
+.job__when{font-size:13.5px; color:var(--graphite-mid); line-height:1.6; font-variant-numeric:tabular-nums}
+.job__when b{display:block; color:var(--ink); font-weight:700; letter-spacing:.01em; font-size:14px}
+.job__org{margin-top:8px; font-size:13.5px; color:var(--graphite-lt); display:block}
+.job h3{font-size:clamp(19px,2.4vw,23px)}
+.job__sub{margin-top:6px; font-size:14px; color:var(--coral-deep); font-weight:600}
+.job__text{margin-top:12px; color:var(--graphite); font-size:15.5px; max-width:64ch}
+.block{margin-top:20px}
+.block--industry{margin-top:30px}
+.block__title{font-family:var(--sans); font-weight:600; font-size:11.5px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--graphite-lt); margin-bottom:10px}
+.list li{position:relative; padding-left:18px; margin-bottom:8px; font-size:15px; color:var(--graphite); max-width:66ch}
+.list li::before{content:""; position:absolute; left:0; top:.62em; width:7px; height:1.5px; background:var(--graphite-lt)}
+.list--win li{color:var(--ink)}
+.list--win li::before{background:var(--coral); width:9px; height:2px}
+.list--win b{font-variant-numeric:tabular-nums}
+.aside{
+  margin-top:20px; padding-left:16px; border-left:2px solid var(--coral-line);
+  font-size:14.5px; color:var(--coral-deep); font-weight:500; max-width:66ch;
+}
+@media (max-width:760px){
+  .job{grid-template-columns:minmax(0,1fr); gap:14px}
+  .job__when{display:flex; flex-wrap:wrap; gap:6px 14px; align-items:baseline}
+  .job__when b{display:inline}
+  .job__org{margin-top:0}
+}
+
+/* ---------- competencies ---------- */
+.comps{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px; background:var(--rule);
+  border:1px solid var(--rule); border-radius:14px; overflow:hidden; margin-top:26px}
+.comp{background:var(--card); padding:22px 20px}
+.comp h3{font-size:16px; letter-spacing:-.01em}
+.comp p{margin-top:8px; font-size:14.5px; color:var(--graphite-mid)}
+.comp__tag{font-family:var(--sans); font-weight:600; font-size:11px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--coral); display:block; margin-bottom:9px}
+@media (max-width:620px){ .comps{grid-template-columns:minmax(0,1fr)} }
+
+.auto{
+  margin-top:26px; border:1px solid var(--coral-line); border-left:3px solid var(--coral);
+  border-radius:12px; background:var(--card); padding:24px clamp(20px,3vw,28px); box-shadow:var(--shadow);
+}
+.auto__tag{font-family:var(--sans); font-weight:600; font-size:11px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--coral); display:block; margin-bottom:9px}
+.auto h3{font-size:clamp(18px,2.3vw,22px)}
+.auto p{margin-top:10px; color:var(--graphite-mid); font-size:15px; max-width:70ch}
+.auto ul{margin-top:16px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 26px}
+@media (max-width:640px){ .auto ul{grid-template-columns:minmax(0,1fr)} }
+
+.chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:26px}
+.chip{
+  font-family:var(--sans); font-size:12.5px; font-weight:500; color:var(--graphite);
+  border:1px solid var(--rule); background:var(--card); border-radius:8px; padding:7px 11px;
+}
+.chip--accent{border-color:var(--coral-line); color:var(--coral-deep); font-weight:600}
+
+/* ---------- profile grid ---------- */
+.grid3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:26px; margin-top:30px}
+@media (max-width:780px){ .grid3{grid-template-columns:minmax(0,1fr); gap:22px} }
+.pane h3{font-family:var(--sans); font-weight:600; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--graphite-lt); font-size:11.5px; padding-bottom:10px; border-bottom:1px solid var(--rule)}
+.pane dl{margin:0; display:flex; flex-direction:column}
+.pane dt{margin-top:14px; font-weight:700; font-size:15px}
+.pane dd{margin:3px 0 0; font-size:14px; color:var(--graphite-mid)}
+.pane dd .num{font-variant-numeric:tabular-nums; color:var(--graphite-lt)}
+
+/* ---------- contacts ---------- */
+.contact{background:var(--dark); color:var(--on-dark); position:relative; overflow:hidden}
+.contact .kicker{color:var(--accent-dark)}
+.contact .kicker::after{background:var(--dark-rule)}
+.contact__lead{margin-top:14px; color:var(--on-dark-mid); max-width:54ch; font-size:16px}
+.contact__actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:26px}
+.reveal .reveal__val{display:none}
+.reveal.is-shown .reveal__val{display:inline; font-family:var(--mono); font-size:14px}
+.reveal.is-shown .reveal__lbl{display:none}
+.contact__meta{margin-top:16px; font-family:var(--sans); font-weight:600; font-size:11.5px;
+  letter-spacing:.11em; color:var(--on-dark-dim); text-transform:uppercase}
+.save{
+  margin-top:32px; display:grid; grid-template-columns:144px minmax(0,1fr); gap:22px; align-items:center;
+  border:1px solid var(--dark-rule); background:rgba(255,255,255,.04); border-radius:16px; padding:22px; max-width:660px;
+}
+.save__qr{background:#fff; border-radius:10px; padding:10px; line-height:0}
+.save__qr svg{width:100%; height:auto; display:block}
+.save h3{font-size:18px}
+.save p{margin-top:8px; font-size:14px; color:var(--on-dark-mid)}
+.save__row{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:14px}
+.save__hint{font-size:12.5px; color:var(--on-dark-dim)}
+@media (max-width:560px){ .save{grid-template-columns:minmax(0,1fr); justify-items:start} .save__qr{width:150px} }
+.foot{border-top:1px solid var(--dark-rule); margin-top:clamp(34px,6vw,54px); padding-top:18px;
+  display:flex; flex-wrap:wrap; gap:8px 20px; align-items:baseline; font-size:12.5px; color:var(--on-dark-dim)}
+.foot a{color:var(--on-dark-mid); text-decoration:none}
+.foot a:hover{color:var(--accent-dark)}
+
+/* ---------- motion ---------- */
+.draw{stroke-dasharray:1400; stroke-dashoffset:1400; animation:draw 2.4s .25s cubic-bezier(.22,.7,.3,1) forwards}
+.draw--2{animation-duration:2.9s; animation-delay:.45s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.rise{animation:rise 1.1s .1s cubic-bezier(.22,.7,.3,1) both}
+@keyframes rise{from{opacity:.55; transform:translateY(10px)} to{opacity:1; transform:none}}
+@media (prefers-reduced-motion: reduce){
+  .draw,.draw--2{animation:none; stroke-dashoffset:0}
+  .rise{animation:none}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap bar__in">
+    <div class="bar__name">Денис Давыдов <span>·</span> управление рисками</div>
+    <nav class="bar__nav"><a href="#results">Результаты</a><a href="#experience">Опыт</a><a href="#skills">Компетенции</a><a href="#profile">Образование</a><a href="#contact">Контакты</a></nav>
+    <div class="langs" role="group" aria-label="Language"><a class="is-on" href="./" aria-current="page">RU</a><a href="../en/" hreflang="en">EN</a></div>
+  </div>
+</header>
+<section class="hero">
+  <div class="hero__glow"></div>
+  <div class="hero__bg" aria-hidden="true"><svg viewBox="0 0 1200 620" preserveAspectRatio="xMidYMax slice" role="presentation">
+      <defs>
+        <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+          <path d="M48 0H0v48" fill="none" stroke="rgba(255,255,255,.055)" stroke-width="1"/>
+        </pattern>
+        <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+        <mask id="gridmask"><rect width="1200" height="620" fill="url(#fade)"/></mask>
+        <linearGradient id="corArea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ee5a52" stop-opacity=".22"/><stop offset="1" stop-color="#ee5a52" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="620" fill="url(#grid)" mask="url(#gridmask)"/>
+      <path class="draw" d="M300 520 C 420 518 500 506 570 472 C 645 438 700 350 740 252 C 776 166 820 116 900 102"
+            fill="none" stroke="rgba(255,128,116,.45)" stroke-width="2"/>
+      <path d="M300 330 L 380 322 L 460 336 L 540 298 L 620 276 L 700 244 L 780 226 L 860 180 L 860 520 L 300 520 Z"
+            fill="url(#corArea)" opacity=".55"/>
+      <path class="draw draw--2" d="M300 330 L 380 322 L 460 336 L 540 298 L 620 276 L 700 244 L 780 226 L 860 180"
+            fill="none" stroke="rgba(238,90,82,.75)" stroke-width="2.5" stroke-linejoin="round"/>
+      <circle cx="860" cy="180" r="4.5" fill="#ee5a52"/>
+      <circle cx="860" cy="180" r="10" fill="none" stroke="rgba(238,90,82,.4)" stroke-width="1.5"/>
+      <g fill="rgba(255,255,255,.08)">
+        <rect x="820" y="470" width="320" height="16" rx="3"/><rect x="852" y="500" width="256" height="16" rx="3"/>
+        <rect x="884" y="530" width="192" height="16" rx="3"/><rect x="916" y="560" width="128" height="16" rx="3"/>
+      </g>
+      <g fill="rgba(238,90,82,.35)">
+        <rect x="820" y="470" width="196" height="16" rx="3"/><rect x="852" y="500" width="150" height="16" rx="3"/>
+        <rect x="884" y="530" width="104" height="16" rx="3"/><rect x="916" y="560" width="58" height="16" rx="3"/>
+      </g>
+      <g font-family="DM Mono, monospace" font-size="11" fill="rgba(255,255,255,.22)" letter-spacing="1">
+        <text x="300" y="544">портфель</text><text x="892" y="106">score</text>
+        <text x="882" y="176">CoR</text><text x="820" y="452">воронка риск-стратегии</text>
+      </g>
+    </svg></div>
+  <div class="wrap hero__in">
+    <div class="rise">
+      <h1>Денис&nbsp;Давыдов</h1>
+      <ul class="hero__role"><li>Управление рисками</li><li>Банковское дело</li><li>Реструктуризация</li><li>Корпоративные финансы</li><li>Управление проектами</li><li>Кредитные процессы</li><li>Цифровая трансформация</li><li>Оптимизация процессов</li><li>Инструменты управления рисками на базе ИИ</li></ul>
+      <p class="hero__sum">Более 20 лет в банковском секторе, из них 9 лет — риск-экспертиза и мониторинг портфеля корпоративных клиентов, последние 4 года — руководство розничными рисками (подразделение 55 человек). Отвечал за стратегию принятия кредитных решений, скоринг и антифрод, методологию ПВР (IRB) и управленческую отчётность по метрикам PD, LGD, EAD, AR, RR, CoR.</p>
+      <ul class="hero__facts"><li class="fact">Москва</li><li class="fact">20+ лет в банках</li><li class="fact">Команды до 55 человек</li><li class="fact">English · C1</li><li class="fact">Python · SQL</li></ul>
+      <div class="hero__cta">
+        <a class="btn btn--outline" href="#contact">Контакты</a>
+        <a class="btn btn--primary btn--cv" href="../files/Davydov_Denis_CV_RU.pdf" download data-cv="Davydov_Denis_CV_RU.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 0 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 0 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1zM4 19a1 1 0 0 1 1-1h14a1 1 0 0 1 0 2H5a1 1 0 0 1-1-1z"></path></svg>Скачать CV</a>
+        <a class="btn btn--ghost-dark" href="https://t.me/denisdev" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"></path></svg>Telegram</a>
+      </div>
+    </div>
+    <div class="hero__portrait">
+      <div class="portrait" role="img" aria-label="Денис Давыдов"></div>
+    </div>
+  </div>
+  <div class="hero__band"><div class="wrap hero__formulas" aria-hidden="true"><span><i>EL</i> = PD × LGD × EAD</span><span><i>CoR</i> = EL / EAD</span><span><i>AR</i> = approved / applications</span><span><i>RR</i> = recovery / EAD</span><span><i>IRB</i> · ПВР · внутренние рейтинги</span></div></div>
+</section>
+<section class="section section--alt" id="results">
+  <div class="wrap">
+    <p class="kicker">Результаты</p>
+    <h2 class="h2">Моя работа в цифрах</h2>
+    <p class="lead">Ключевые эффекты из последних двух ролей: перевод розничного андеррайтинга на автоматические решения, пересборка риск-стратегии и дисциплина сроков риск-экспертизы корпоративных сделок.</p>
+    <div class="metrics"><article class="metric">
+        <p class="metric__label">Ручной андеррайтинг</p>
+        <p class="metric__value"><b>≈0<span class="u">%</span></b></p>
+        <p class="metric__note">Завершён переход к автоматизированному процессу принятия решений по розничным заявкам.</p>
+        <p class="metric__delta"><s>ручная обработка</s> <i>→</i> авторешение</p>
+      </article><article class="metric">
+        <p class="metric__label">Время решения</p>
+        <p class="metric__value">15 <span class="u2">мин</span></p>
+        <p class="metric__note">Среднее время принятия кредитного решения по заявке после автоматизации процесса.</p>
+        <p class="metric__delta"><s>2 дня</s> <i>→</i> 15 минут</p>
+      </article><article class="metric">
+        <p class="metric__label">Approval Rate</p>
+        <p class="metric__value"><b>+10</b> <span class="u3">п.п.</span></p>
+        <p class="metric__note">Эффект обновлённой риск-стратегии при неизменном уровне риска портфеля.</p>
+        <p class="metric__delta">CoR новых выдач <i>&lt; 1%</i></p>
+      </article><article class="metric">
+        <p class="metric__label">Инвестиционные сделки</p>
+        <p class="metric__value">ТОП-20</p>
+        <p class="metric__note">Участие в формировании структуры сделок финансирования инвестпроектов для крупнейших клиентов кредитного портфеля банка.</p>
+        <p class="metric__delta">АПК <i>·</i> строительство МКД <i>·</i> M&amp;A</p>
+      </article><article class="metric">
+        <p class="metric__label">SLA риск-экспертизы</p>
+        <p class="metric__value">95<span class="u">%</span></p>
+        <p class="metric__note">Исполнение SLA по срокам экспертизы корпоративных сделок, включая периоды пиковой нагрузки.</p>
+        <p class="metric__delta">команда <i>15</i> риск-менеджеров</p>
+      </article><article class="metric">
+        <p class="metric__label">Импортозамещение антифрода</p>
+        <p class="metric__value">1 <span class="u3">контур</span></p>
+        <p class="metric__note">Заявочный антифрод переведён на новое ПО: от бизнес-требований и выбора подрядчика до миграции процессов.</p>
+        <p class="metric__delta">требования <i>→</i> выбор <i>→</i> миграция</p>
+      </article></div>
+  </div>
+</section>
+<section class="section" id="experience">
+  <div class="wrap">
+    <p class="kicker">Опыт</p>
+    <h2 class="h2">Место работы</h2>
+    <div class="jobs"><article class="job">
+        <div class="job__when"><b>сент. 2022 — июль 2026</b><span class="job__org">Россельхозбанк, Москва</span></div>
+        <div>
+          <h3>Руководитель розничных рисков / CRO</h3><p class="job__sub">Подразделение 55 сотрудников</p>
+          <p class="job__text">Общее руководство направлением розничных рисков: методология, риск-аналитика и риск-технологии, андеррайтинг, взаимодействие с бюро кредитных историй.</p><div class="block"><p class="block__title">Зона ответственности</p><ul class="list"><li>стратегия принятия кредитных решений и лимитная политика по всей линейке розничного кредитования</li><li>правила применения скоринговых моделей и схемы маршрутизации заявок</li><li>антифрод-контур по кредитным заявкам</li><li>координация разработки методологии и моделирования рисков для подхода ПВР (IRB)</li><li>управленческая отчётность по уровню риска и воронке риск-стратегии с применением метрик PD, LGD, EAD, AR, RR, CoR и других</li><li>оценка целесообразности и экономического эффекта подключения внешних и внутренних источников данных</li></ul></div><div class="block"><p class="block__title">Ключевые результаты</p><ul class="list list--win"><li>завершён переход к автоматизированному процессу принятия решений: доля ручного андеррайтинга снижена практически до <b>0%</b>, среднее время решения — с <b>2 дней до 15 минут</b></li><li><b>+10 п.п.</b> к Approval Rate обновлённой риск-стратегии при неизменном уровне риска (CoR новых выдач <b>&lt; 1%</b>)</li><li>реализовано импортозамещение системы заявочного антифрода: от бизнес-требований и выбора подрядчика до миграции процессов на новое ПО</li><li>выстроена управленческая отчётность по уровню риска и воронке риск-стратегии в метриках PD, LGD, EAD, AR, RR, CoR — единая картина риска для бизнеса и комитетов</li></ul></div><p class="aside">С декабря 2024 по февраль 2026 совмещал руководство Управлением финансовых рисков: рыночный риск, риск ликвидности, IRRBB, стресс-тестирование. Член Комитета по развитию розничного бизнеса (с сентября 2022) и Комитета по активам и пассивам, ALCO (с декабря 2024).</p>
+        </div>
+      </article><article class="job">
+        <div class="job__when"><b>июль 2016 — сент. 2022</b><span class="job__org">Россельхозбанк, Москва</span></div>
+        <div>
+          <h3>Заместитель руководителя Управления оценки кредитных рисков корпоративных клиентов</h3><p class="job__sub">Карьерный путь: главный специалист → руководитель отдела → заместитель руководителя управления</p>
+          <p class="job__text">Организация риск-экспертизы кредитных решений по клиентам КИБ, руководство командой из 15 корпоративных риск-менеджеров, развитие подходов к оценке отраслевых и клиентских рисков.</p><div class="block"><p class="block__title">Зона ответственности</p><ul class="list"><li>оценка уровня кредитных и рыночных рисков по сложным кредитным сделкам, участие в структурировании сделок корпоративного кредитования, администрирование кредитной политики банка</li><li>формирование предложений по ковенантному пакету, мониторинг выполнения ковенант, анализ причин нарушений и предложения по минимизации рисков</li><li>анализ ФХД заёмщиков и групп компаний (РСБУ, МСФО), построение и проверка финансовых моделей, прогнозных балансов, P&amp;L и денежных потоков</li><li>контроль объёма проблемной задолженности, выявление клиентов повышенного внимания, рекомендации по стратегии возврата проблемных долгов</li><li>представление позиции риск-функции на кредитных комитетах и во взаимодействии с бизнес-подразделениями</li><li>методология и внутренняя нормативная база, мониторинг кредитной активности филиалов, обучение и наставничество риск-менеджеров</li></ul></div><div class="block"><p class="block__title">Ключевые результаты</p><ul class="list list--win"><li>исполнение SLA на уровне <b>95%</b>, включая периоды пиковой нагрузки</li><li>участие в формировании структуры сделок по финансированию инвестпроектов в АПК, строительстве МКД и сделок M&amp;A для <b>ТОП-20</b> клиентов кредитного портфеля</li><li>внедрена платформа для сбора, учёта, хранения и анализа значений Премии за кредитный риск (ПКР) — существенно сократилось время поиска информации в неструктурированных источниках</li><li>автоматизирован сбор ежедневной риск-отчётности на Java — прозрачная картина загрузки риск-менеджеров и контроль SLA по срокам экспертизы</li><li>инициирован пересмотр подходов к хеджированию сделок и расширение лимитного пространства в пользу производных инструментов</li></ul></div>
+        </div>
+      </article><article class="job">
+        <div class="job__when"><b>июнь 2006 — июль 2015</b><span class="job__org">Российские банки · Оренбург, Москва</span></div>
+        <div>
+          <h3>Финансовый аналитик → руководитель кредитного отдела</h3>
+          <p class="job__text">Корпоративное кредитование: анализ финансово-хозяйственной деятельности заёмщиков, подготовка кредитных заключений, затем руководство кредитным подразделением.</p>
+        </div>
+      </article></div>
+  </div>
+</section>
+<section class="section section--alt" id="skills">
+  <div class="wrap">
+    <p class="kicker">Компетенции</p>
+    <h2 class="h2">Моя профессиональная область</h2>
+    <p class="lead">Полный цикл риск-функции в двух сегментах: корпоративный портфель — от анализа отчётности заёмщика до структуры сделки; розница — от скоринговой стратегии до воронки решений и антифрода.</p>
+    <div class="comps"><article class="comp">
+        <span class="comp__tag">Корпоративные риски</span>
+        <h3>Анализ ФХД предприятий и групп компаний</h3>
+        <p>РСБУ и МСФО, аналитические корректировки отчётности, оценка групп связанных заёмщиков.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Корпоративные риски</span>
+        <h3>Финансовые модели и стресс-тестирование</h3>
+        <p>Сценарный анализ, CF-моделирование, прогнозные балансы и P&amp;L, валидация моделей.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Корпоративные риски</span>
+        <h3>Структурирование и независимая риск-экспертиза</h3>
+        <p>Сложные корпоративные сделки, внутренние кредитные рейтинги, реструктуризация, оценка влияния решений на финансовый результат банка.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Портфель</span>
+        <h3>Мониторинг портфеля и ковенанты</h3>
+        <p>Выявление проблемных клиентов и клиентов повышенного внимания, ковенантный пакет: формирование, мониторинг, работа с нарушениями.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Розничные риски</span>
+        <h3>Риск-стратегия и лимитная политика розницы</h3>
+        <p>Стратегия принятия кредитных решений по всей линейке розничного кредитования, управление Approval Rate и стоимостью риска новых выдач.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Розничные риски</span>
+        <h3>Скоринг, маршрутизация заявок и антифрод</h3>
+        <p>Правила применения скоринговых моделей, схемы маршрутизации, заявочный антифрод-контур, работа с бюро кредитных историй и источниками данных.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Розничные риски</span>
+        <h3>ПВР (IRB): методология и моделирование</h3>
+        <p>Координация разработки методологии и моделей для перехода на подход внутренних рейтингов, валидация и контроль качества моделей.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Отчётность</span>
+        <h3>Риск-метрики и управленческая отчётность</h3>
+        <p>Воронка риск-стратегии и уровень риска в метриках PD, LGD, EAD, AR, RR, CoR; отчётность для бизнеса, комитетов и ALCO.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Методология</span>
+        <h3>Методология и внутренняя нормативная база</h3>
+        <p>Кредитная политика, внутренние нормативные документы, регламенты кредитных процессов и их оптимизация.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Команда</span>
+        <h3>Управление командой и наставничество</h3>
+        <p>Команды до 55 человек, обучение сотрудников, представление позиции риск-функции на кредитных комитетах.</p>
+      </article></div>
+    <div class="auto">
+      <span class="auto__tag">Отдельное направление</span>
+      <h3>Автоматизация и цифровая трансформация риск-процессов</h3>
+      <p>Провожу процессы от бизнес-требований до промышленной эксплуатации: постановка задач, выбор подрядчика, приёмка, миграция и контроль эффекта на сроки, риск и стоимость процесса.</p>
+      <ul class="list"><li>автоматизированное принятие кредитных решений: правила, маршрутизация, отказ от ручного андеррайтинга</li><li>импортозамещение и внедрение систем заявочного антифрода</li><li>платформа учёта и анализа Премии за кредитный риск (ПКР)</li><li>автоматизация ежедневной риск-отчётности и контроля SLA</li><li>оценка экономического эффекта подключения источников данных</li><li>инструменты управления рисками на базе ИИ, аналитический стек Python / SQL</li></ul>
+    </div>
+    <div class="chips"><span class="chip chip--accent">PD · LGD · EAD</span><span class="chip chip--accent">AR · RR · CoR</span><span class="chip">ПВР (IRB)</span><span class="chip">РСБУ / МСФО</span><span class="chip">Скоринг и маршрутизация</span><span class="chip">Антифрод</span><span class="chip">БКИ</span><span class="chip">Ковенанты</span><span class="chip">Стресс-тестирование</span><span class="chip">Реструктуризация</span><span class="chip">IRRBB</span><span class="chip">ALCO</span><span class="chip">Проблемная задолженность</span></div>
+    <div class="block block--industry">
+      <p class="block__title">Отраслевая экспертиза</p>
+      <ul class="list"><li>АПК · девелопмент и инфраструктура · оптовая и розничная торговля · энергетика · нефтегазовая и транспортная отрасли</li></ul>
+    </div>
+  </div>
+</section>
+<section class="section" id="profile">
+  <div class="wrap">
+    <p class="kicker">Образование и инструменты</p>
+    <h2 class="h2">Профиль</h2>
+    <div class="grid3"><div class="pane"><h3>Образование</h3><dl><dt>Финансы и кредит, банковское дело</dt><dd>Оренбургский государственный университет, финансово-экономический факультет <span class="num">2000 — 2005</span></dd><dt>Аспирантура</dt><dd>Оренбургский государственный университет <span class="num">2005 — 2007</span></dd></dl></div><div class="pane"><h3>Сертификаты и языки</h3><dl><dt>Google Project Management Professional</dt><dd><span class="num">дек. 2021</span></dd><dt>Financial Modeling Foundations</dt><dd><span class="num">авг. 2020</span></dd><dt>Языки</dt><dd>Русский — родной · английский — C1 · немецкий — базовый</dd></dl></div><div class="pane"><h3>Технологии</h3><dl><dt>Аналитический стек</dt><dd>Python (pandas, NumPy, JupyterLab), SQL</dd><dt>Разработка</dt><dd>Базовые навыки PHP, JS, HTML; автоматизация отчётности на Java</dd><dt>Системы</dt><dd>Linux, Windows, Microsoft Office, Prezi, Lotus, банковское ПО ЦФТ</dd><dt>Вне работы</dt><dd>Рыбалка, спорт</dd></dl></div></div>
+  </div>
+</section>
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <p class="kicker">Контакты</p>
+    <h2 class="h2">Буду рад общению</h2>
+    <p class="contact__lead">Пишите в Telegram — отвечаю быстрее всего. Перед звонком лучше написать в мессенджер.</p>
+    <div class="contact__actions">
+      <a class="btn btn--primary" href="https://t.me/denisdev" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"></path></svg>Telegram</a>
+      <a class="btn btn--ghost-dark" href="https://www.linkedin.com/in/denisdavydovbanking/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 21h3.5V8.5H3.2V21zm6.3 0H13v-6.6c0-1.7 1-2.5 2.1-2.5 1.1 0 1.8.8 1.8 2.5V21h3.5v-7c0-3.3-1.8-4.9-4.2-4.9-1.9 0-2.9 1.1-3.2 1.8V8.5H9.5V21z"></path></svg>LinkedIn</a>
+      <button class="btn btn--ghost-dark reveal" type="button" data-href="mailto:denisdavydov.dd@gmail.com" aria-label="Показать почту">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></svg><span class="reveal__lbl">Показать почту</span><span class="reveal__val">denisdavydov.dd@gmail.com</span>
+      </button>
+      <button class="btn btn--ghost-dark reveal" type="button" data-href="tel:+79197296847" aria-label="Показать телефон">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg><span class="reveal__lbl">Показать телефон</span><span class="reveal__val">+7 919 729-68-47</span>
+      </button>
+      <a class="btn btn--ghost-dark" href="../files/Davydov_Denis_CV_RU.pdf" download data-cv="Davydov_Denis_CV_RU.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 0 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 0 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1zM4 19a1 1 0 0 1 1-1h14a1 1 0 0 1 0 2H5a1 1 0 0 1-1-1z"></path></svg>Скачать CV</a>
+    </div>
+    <p class="contact__meta">Москва · Telegram @denisdev</p>
+    <div class="save">
+      <div class="save__qr">
+        <svg viewBox="0 0 69 69" shape-rendering="crispEdges" role="img" aria-label="QR-код с контактом Дениса Давыдова">
+          <rect width="69" height="69" fill="#ffffff"></rect><path d="M0 0h7v1h-7zM11 0h3v1h-3zM19 0h3v1h-3zM25 0h1v1h-1zM29 0h1v1h-1zM32 0h2v1h-2zM36 0h2v1h-2zM39 0h5v1h-5zM46 0h1v1h-1zM50 0h2v1h-2zM55 0h1v1h-1zM57 0h4v1h-4zM62 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM10 1h2v1h-2zM14 1h1v1h-1zM16 1h1v1h-1zM20 1h1v1h-1zM23 1h4v1h-4zM30 1h1v1h-1zM35 1h3v1h-3zM40 1h2v1h-2zM44 1h2v1h-2zM47 1h1v1h-1zM49 1h3v1h-3zM54 1h1v1h-1zM62 1h1v1h-1zM68 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM8 2h1v1h-1zM10 2h2v1h-2zM13 2h5v1h-5zM19 2h1v1h-1zM23 2h2v1h-2zM26 2h2v1h-2zM30 2h1v1h-1zM33 2h1v1h-1zM37 2h2v1h-2zM41 2h1v1h-1zM45 2h1v1h-1zM48 2h3v1h-3zM53 2h6v1h-6zM62 2h1v1h-1zM64 2h3v1h-3zM68 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM8 3h1v1h-1zM13 3h2v1h-2zM16 3h4v1h-4zM21 3h1v1h-1zM25 3h4v1h-4zM46 3h4v1h-4zM53 3h1v1h-1zM56 3h1v1h-1zM60 3h1v1h-1zM62 3h1v1h-1zM64 3h3v1h-3zM68 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM8 4h2v1h-2zM11 4h2v1h-2zM14 4h3v1h-3zM18 4h3v1h-3zM23 4h1v1h-1zM29 4h1v1h-1zM31 4h6v1h-6zM40 4h4v1h-4zM48 4h1v1h-1zM51 4h2v1h-2zM54 4h1v1h-1zM58 4h1v1h-1zM60 4h1v1h-1zM62 4h1v1h-1zM64 4h3v1h-3zM68 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h3v1h-3zM13 5h2v1h-2zM16 5h1v1h-1zM20 5h1v1h-1zM27 5h2v1h-2zM30 5h3v1h-3zM36 5h5v1h-5zM43 5h3v1h-3zM48 5h1v1h-1zM51 5h2v1h-2zM54 5h1v1h-1zM57 5h2v1h-2zM62 5h1v1h-1zM68 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h1v1h-1zM28 6h1v1h-1zM30 6h1v1h-1zM32 6h1v1h-1zM34 6h1v1h-1zM36 6h1v1h-1zM38 6h1v1h-1zM40 6h1v1h-1zM42 6h1v1h-1zM44 6h1v1h-1zM46 6h1v1h-1zM48 6h1v1h-1zM50 6h1v1h-1zM52 6h1v1h-1zM54 6h1v1h-1zM56 6h1v1h-1zM58 6h1v1h-1zM60 6h1v1h-1zM62 6h7v1h-7zM8 7h2v1h-2zM12 7h2v1h-2zM16 7h4v1h-4zM21 7h1v1h-1zM23 7h1v1h-1zM25 7h1v1h-1zM28 7h1v1h-1zM30 7h1v1h-1zM32 7h1v1h-1zM36 7h2v1h-2zM41 7h1v1h-1zM45 7h2v1h-2zM51 7h1v1h-1zM53 7h4v1h-4zM59 7h2v1h-2zM0 8h1v1h-1zM2 8h5v1h-5zM16 8h1v1h-1zM20 8h4v1h-4zM28 8h1v1h-1zM31 8h6v1h-6zM38 8h1v1h-1zM40 8h1v1h-1zM43 8h1v1h-1zM46 8h3v1h-3zM52 8h1v1h-1zM54 8h1v1h-1zM56 8h1v1h-1zM59 8h1v1h-1zM62 8h5v1h-5zM0 9h3v1h-3zM4 9h2v1h-2zM7 9h1v1h-1zM9 9h7v1h-7zM17 9h3v1h-3zM25 9h1v1h-1zM29 9h1v1h-1zM31 9h5v1h-5zM37 9h1v1h-1zM40 9h2v1h-2zM45 9h1v1h-1zM47 9h1v1h-1zM50 9h5v1h-5zM57 9h1v1h-1zM59 9h3v1h-3zM65 9h2v1h-2zM68 9h1v1h-1zM0 10h2v1h-2zM5 10h4v1h-4zM10 10h1v1h-1zM12 10h2v1h-2zM15 10h4v1h-4zM20 10h2v1h-2zM23 10h3v1h-3zM28 10h11v1h-11zM40 10h1v1h-1zM42 10h1v1h-1zM46 10h2v1h-2zM49 10h2v1h-2zM52 10h1v1h-1zM54 10h1v1h-1zM58 10h2v1h-2zM62 10h4v1h-4zM67 10h1v1h-1zM5 11h1v1h-1zM8 11h7v1h-7zM16 11h2v1h-2zM21 11h3v1h-3zM25 11h1v1h-1zM29 11h2v1h-2zM34 11h2v1h-2zM37 11h1v1h-1zM43 11h1v1h-1zM49 11h5v1h-5zM55 11h1v1h-1zM57 11h1v1h-1zM59 11h1v1h-1zM61 11h2v1h-2zM64 11h1v1h-1zM66 11h3v1h-3zM1 12h1v1h-1zM4 12h3v1h-3zM9 12h4v1h-4zM16 12h1v1h-1zM18 12h2v1h-2zM21 12h1v1h-1zM23 12h2v1h-2zM26 12h5v1h-5zM35 12h1v1h-1zM37 12h1v1h-1zM40 12h1v1h-1zM43 12h1v1h-1zM45 12h1v1h-1zM47 12h3v1h-3zM55 12h1v1h-1zM59 12h1v1h-1zM62 12h1v1h-1zM0 13h2v1h-2zM3 13h1v1h-1zM5 13h1v1h-1zM10 13h1v1h-1zM12 13h2v1h-2zM17 13h1v1h-1zM23 13h1v1h-1zM30 13h2v1h-2zM35 13h1v1h-1zM37 13h1v1h-1zM39 13h2v1h-2zM42 13h1v1h-1zM44 13h1v1h-1zM49 13h1v1h-1zM51 13h5v1h-5zM57 13h1v1h-1zM60 13h2v1h-2zM63 13h3v1h-3zM67 13h2v1h-2zM0 14h3v1h-3zM6 14h3v1h-3zM11 14h2v1h-2zM14 14h1v1h-1zM16 14h3v1h-3zM20 14h1v1h-1zM23 14h2v1h-2zM27 14h2v1h-2zM32 14h1v1h-1zM35 14h7v1h-7zM44 14h2v1h-2zM47 14h1v1h-1zM51 14h1v1h-1zM59 14h2v1h-2zM65 14h1v1h-1zM0 15h1v1h-1zM2 15h1v1h-1zM5 15h1v1h-1zM8 15h2v1h-2zM11 15h2v1h-2zM15 15h3v1h-3zM21 15h1v1h-1zM23 15h1v1h-1zM25 15h1v1h-1zM28 15h1v1h-1zM31 15h1v1h-1zM34 15h1v1h-1zM36 15h4v1h-4zM43 15h1v1h-1zM45 15h1v1h-1zM47 15h1v1h-1zM51 15h3v1h-3zM57 15h2v1h-2zM61 15h2v1h-2zM64 15h1v1h-1zM66 15h3v1h-3zM1 16h1v1h-1zM4 16h1v1h-1zM6 16h2v1h-2zM11 16h1v1h-1zM14 16h1v1h-1zM18 16h2v1h-2zM22 16h2v1h-2zM27 16h5v1h-5zM35 16h2v1h-2zM38 16h2v1h-2zM43 16h3v1h-3zM48 16h2v1h-2zM51 16h1v1h-1zM54 16h5v1h-5zM60 16h1v1h-1zM62 16h2v1h-2zM66 16h2v1h-2zM7 17h1v1h-1zM9 17h1v1h-1zM15 17h1v1h-1zM18 17h2v1h-2zM23 17h1v1h-1zM27 17h1v1h-1zM33 17h1v1h-1zM36 17h4v1h-4zM41 17h2v1h-2zM44 17h3v1h-3zM48 17h2v1h-2zM53 17h2v1h-2zM56 17h1v1h-1zM61 17h2v1h-2zM65 17h3v1h-3zM1 18h3v1h-3zM5 18h7v1h-7zM15 18h1v1h-1zM18 18h1v1h-1zM23 18h1v1h-1zM26 18h3v1h-3zM31 18h3v1h-3zM35 18h2v1h-2zM39 18h1v1h-1zM42 18h1v1h-1zM44 18h1v1h-1zM46 18h2v1h-2zM50 18h1v1h-1zM52 18h1v1h-1zM55 18h2v1h-2zM59 18h2v1h-2zM63 18h2v1h-2zM66 18h3v1h-3zM0 19h1v1h-1zM4 19h2v1h-2zM10 19h3v1h-3zM16 19h2v1h-2zM20 19h1v1h-1zM22 19h1v1h-1zM27 19h2v1h-2zM34 19h1v1h-1zM37 19h2v1h-2zM42 19h1v1h-1zM45 19h8v1h-8zM54 19h1v1h-1zM56 19h3v1h-3zM60 19h2v1h-2zM64 19h1v1h-1zM66 19h2v1h-2zM1 20h2v1h-2zM6 20h2v1h-2zM9 20h4v1h-4zM14 20h1v1h-1zM16 20h3v1h-3zM21 20h1v1h-1zM23 20h4v1h-4zM30 20h3v1h-3zM36 20h2v1h-2zM39 20h1v1h-1zM42 20h1v1h-1zM46 20h2v1h-2zM49 20h2v1h-2zM53 20h3v1h-3zM58 20h1v1h-1zM60 20h5v1h-5zM66 20h3v1h-3zM1 21h5v1h-5zM8 21h1v1h-1zM10 21h1v1h-1zM15 21h2v1h-2zM18 21h1v1h-1zM22 21h3v1h-3zM26 21h1v1h-1zM28 21h1v1h-1zM36 21h1v1h-1zM43 21h1v1h-1zM48 21h2v1h-2zM54 21h2v1h-2zM58 21h1v1h-1zM61 21h1v1h-1zM63 21h1v1h-1zM67 21h1v1h-1zM2 22h1v1h-1zM4 22h3v1h-3zM8 22h1v1h-1zM13 22h2v1h-2zM19 22h1v1h-1zM21 22h1v1h-1zM29 22h1v1h-1zM31 22h2v1h-2zM35 22h2v1h-2zM39 22h1v1h-1zM43 22h2v1h-2zM47 22h1v1h-1zM50 22h1v1h-1zM52 22h4v1h-4zM59 22h2v1h-2zM63 22h1v1h-1zM65 22h2v1h-2zM68 22h1v1h-1zM1 23h2v1h-2zM7 23h2v1h-2zM11 23h3v1h-3zM15 23h1v1h-1zM19 23h3v1h-3zM33 23h1v1h-1zM36 23h1v1h-1zM39 23h7v1h-7zM47 23h2v1h-2zM51 23h1v1h-1zM54 23h1v1h-1zM56 23h3v1h-3zM60 23h3v1h-3zM65 23h2v1h-2zM1 24h2v1h-2zM4 24h1v1h-1zM6 24h3v1h-3zM11 24h1v1h-1zM13 24h2v1h-2zM16 24h3v1h-3zM20 24h1v1h-1zM23 24h1v1h-1zM26 24h5v1h-5zM34 24h1v1h-1zM36 24h1v1h-1zM42 24h1v1h-1zM46 24h4v1h-4zM58 24h2v1h-2zM62 24h1v1h-1zM64 24h1v1h-1zM66 24h1v1h-1zM2 25h1v1h-1zM4 25h2v1h-2zM7 25h3v1h-3zM11 25h1v1h-1zM13 25h1v1h-1zM15 25h1v1h-1zM17 25h3v1h-3zM23 25h1v1h-1zM25 25h3v1h-3zM31 25h1v1h-1zM34 25h2v1h-2zM38 25h2v1h-2zM41 25h2v1h-2zM44 25h1v1h-1zM47 25h3v1h-3zM53 25h2v1h-2zM56 25h1v1h-1zM58 25h1v1h-1zM60 25h4v1h-4zM66 25h2v1h-2zM1 26h1v1h-1zM3 26h6v1h-6zM10 26h1v1h-1zM12 26h3v1h-3zM16 26h1v1h-1zM21 26h1v1h-1zM25 26h1v1h-1zM33 26h2v1h-2zM37 26h1v1h-1zM42 26h5v1h-5zM50 26h1v1h-1zM54 26h3v1h-3zM61 26h1v1h-1zM63 26h1v1h-1zM66 26h3v1h-3zM0 27h1v1h-1zM3 27h3v1h-3zM9 27h1v1h-1zM12 27h2v1h-2zM15 27h3v1h-3zM19 27h2v1h-2zM24 27h2v1h-2zM27 27h1v1h-1zM31 27h1v1h-1zM36 27h1v1h-1zM40 27h4v1h-4zM47 27h1v1h-1zM53 27h2v1h-2zM56 27h2v1h-2zM60 27h1v1h-1zM64 27h1v1h-1zM67 27h2v1h-2zM1 28h3v1h-3zM5 28h2v1h-2zM8 28h2v1h-2zM11 28h5v1h-5zM17 28h1v1h-1zM20 28h2v1h-2zM23 28h1v1h-1zM26 28h1v1h-1zM29 28h5v1h-5zM36 28h2v1h-2zM41 28h2v1h-2zM45 28h1v1h-1zM48 28h2v1h-2zM52 28h4v1h-4zM57 28h1v1h-1zM59 28h1v1h-1zM63 28h3v1h-3zM68 28h1v1h-1zM1 29h2v1h-2zM5 29h1v1h-1zM12 29h3v1h-3zM16 29h1v1h-1zM18 29h2v1h-2zM24 29h2v1h-2zM28 29h3v1h-3zM35 29h1v1h-1zM38 29h1v1h-1zM42 29h2v1h-2zM47 29h2v1h-2zM51 29h3v1h-3zM58 29h1v1h-1zM60 29h1v1h-1zM62 29h2v1h-2zM65 29h2v1h-2zM68 29h1v1h-1zM0 30h3v1h-3zM5 30h8v1h-8zM14 30h3v1h-3zM18 30h3v1h-3zM22 30h2v1h-2zM25 30h4v1h-4zM30 30h2v1h-2zM33 30h1v1h-1zM39 30h1v1h-1zM41 30h1v1h-1zM45 30h2v1h-2zM48 30h2v1h-2zM51 30h5v1h-5zM61 30h3v1h-3zM66 30h1v1h-1zM0 31h2v1h-2zM3 31h2v1h-2zM13 31h1v1h-1zM16 31h2v1h-2zM19 31h2v1h-2zM24 31h1v1h-1zM27 31h1v1h-1zM29 31h4v1h-4zM36 31h2v1h-2zM39 31h1v1h-1zM44 31h2v1h-2zM47 31h3v1h-3zM51 31h1v1h-1zM53 31h1v1h-1zM55 31h2v1h-2zM59 31h1v1h-1zM61 31h1v1h-1zM63 31h1v1h-1zM65 31h1v1h-1zM67 31h1v1h-1zM0 32h2v1h-2zM4 32h6v1h-6zM13 32h1v1h-1zM16 32h2v1h-2zM22 32h3v1h-3zM30 32h1v1h-1zM32 32h5v1h-5zM43 32h1v1h-1zM45 32h1v1h-1zM47 32h2v1h-2zM50 32h2v1h-2zM57 32h2v1h-2zM60 32h7v1h-7zM0 33h1v1h-1zM4 33h1v1h-1zM8 33h3v1h-3zM12 33h2v1h-2zM15 33h1v1h-1zM17 33h3v1h-3zM21 33h1v1h-1zM26 33h2v1h-2zM29 33h4v1h-4zM36 33h2v1h-2zM39 33h5v1h-5zM49 33h1v1h-1zM51 33h3v1h-3zM57 33h1v1h-1zM60 33h1v1h-1zM64 33h1v1h-1zM66 33h1v1h-1zM1 34h1v1h-1zM3 34h2v1h-2zM6 34h1v1h-1zM8 34h1v1h-1zM13 34h1v1h-1zM15 34h1v1h-1zM20 34h3v1h-3zM24 34h3v1h-3zM30 34h1v1h-1zM32 34h1v1h-1zM34 34h1v1h-1zM36 34h2v1h-2zM39 34h1v1h-1zM41 34h3v1h-3zM45 34h2v1h-2zM48 34h1v1h-1zM51 34h1v1h-1zM53 34h3v1h-3zM58 34h3v1h-3zM62 34h1v1h-1zM64 34h1v1h-1zM66 34h2v1h-2zM0 35h1v1h-1zM2 35h3v1h-3zM8 35h1v1h-1zM11 35h1v1h-1zM17 35h5v1h-5zM24 35h1v1h-1zM26 35h2v1h-2zM30 35h1v1h-1zM32 35h1v1h-1zM36 35h2v1h-2zM39 35h1v1h-1zM42 35h1v1h-1zM44 35h2v1h-2zM47 35h2v1h-2zM50 35h1v1h-1zM54 35h2v1h-2zM59 35h2v1h-2zM64 35h1v1h-1zM68 35h1v1h-1zM0 36h1v1h-1zM2 36h7v1h-7zM10 36h1v1h-1zM16 36h1v1h-1zM18 36h1v1h-1zM25 36h3v1h-3zM29 36h1v1h-1zM31 36h6v1h-6zM41 36h1v1h-1zM43 36h1v1h-1zM48 36h1v1h-1zM52 36h7v1h-7zM60 36h6v1h-6zM0 37h6v1h-6zM8 37h2v1h-2zM11 37h1v1h-1zM13 37h3v1h-3zM18 37h2v1h-2zM21 37h1v1h-1zM24 37h1v1h-1zM29 37h2v1h-2zM32 37h1v1h-1zM34 37h1v1h-1zM36 37h2v1h-2zM41 37h2v1h-2zM44 37h2v1h-2zM47 37h4v1h-4zM53 37h1v1h-1zM57 37h1v1h-1zM59 37h1v1h-1zM61 37h1v1h-1zM68 37h1v1h-1zM0 38h1v1h-1zM2 38h5v1h-5zM8 38h2v1h-2zM15 38h2v1h-2zM19 38h1v1h-1zM23 38h1v1h-1zM25 38h1v1h-1zM28 38h1v1h-1zM31 38h2v1h-2zM35 38h1v1h-1zM39 38h2v1h-2zM43 38h2v1h-2zM48 38h2v1h-2zM52 38h3v1h-3zM56 38h5v1h-5zM65 38h2v1h-2zM1 39h1v1h-1zM3 39h3v1h-3zM7 39h3v1h-3zM11 39h1v1h-1zM14 39h4v1h-4zM19 39h3v1h-3zM27 39h1v1h-1zM30 39h1v1h-1zM32 39h3v1h-3zM36 39h1v1h-1zM38 39h1v1h-1zM40 39h1v1h-1zM45 39h2v1h-2zM50 39h2v1h-2zM53 39h1v1h-1zM55 39h1v1h-1zM62 39h1v1h-1zM66 39h3v1h-3zM0 40h1v1h-1zM2 40h1v1h-1zM6 40h1v1h-1zM9 40h2v1h-2zM13 40h1v1h-1zM16 40h2v1h-2zM19 40h4v1h-4zM24 40h2v1h-2zM27 40h3v1h-3zM31 40h2v1h-2zM38 40h2v1h-2zM41 40h2v1h-2zM48 40h1v1h-1zM50 40h2v1h-2zM53 40h5v1h-5zM60 40h2v1h-2zM63 40h1v1h-1zM65 40h1v1h-1zM67 40h1v1h-1zM0 41h1v1h-1zM4 41h1v1h-1zM9 41h2v1h-2zM15 41h1v1h-1zM17 41h1v1h-1zM21 41h2v1h-2zM24 41h3v1h-3zM29 41h2v1h-2zM32 41h4v1h-4zM37 41h1v1h-1zM39 41h1v1h-1zM41 41h3v1h-3zM49 41h1v1h-1zM54 41h1v1h-1zM61 41h3v1h-3zM65 41h4v1h-4zM4 42h1v1h-1zM6 42h4v1h-4zM11 42h4v1h-4zM16 42h2v1h-2zM19 42h4v1h-4zM31 42h1v1h-1zM36 42h1v1h-1zM38 42h1v1h-1zM40 42h2v1h-2zM43 42h3v1h-3zM49 42h1v1h-1zM52 42h1v1h-1zM54 42h2v1h-2zM57 42h2v1h-2zM60 42h1v1h-1zM63 42h2v1h-2zM66 42h2v1h-2zM1 43h2v1h-2zM5 43h1v1h-1zM12 43h5v1h-5zM19 43h1v1h-1zM23 43h3v1h-3zM27 43h3v1h-3zM32 43h1v1h-1zM35 43h1v1h-1zM38 43h1v1h-1zM40 43h1v1h-1zM42 43h2v1h-2zM45 43h2v1h-2zM54 43h2v1h-2zM57 43h3v1h-3zM61 43h8v1h-8zM0 44h1v1h-1zM2 44h3v1h-3zM6 44h1v1h-1zM8 44h1v1h-1zM11 44h6v1h-6zM22 44h3v1h-3zM28 44h2v1h-2zM32 44h1v1h-1zM37 44h1v1h-1zM39 44h5v1h-5zM46 44h1v1h-1zM48 44h1v1h-1zM51 44h1v1h-1zM54 44h5v1h-5zM62 44h2v1h-2zM67 44h1v1h-1zM0 45h1v1h-1zM2 45h1v1h-1zM4 45h2v1h-2zM9 45h1v1h-1zM11 45h3v1h-3zM18 45h1v1h-1zM20 45h1v1h-1zM23 45h1v1h-1zM25 45h2v1h-2zM29 45h2v1h-2zM33 45h1v1h-1zM35 45h1v1h-1zM37 45h1v1h-1zM39 45h1v1h-1zM42 45h2v1h-2zM45 45h1v1h-1zM49 45h2v1h-2zM53 45h2v1h-2zM59 45h3v1h-3zM65 45h1v1h-1zM67 45h2v1h-2zM1 46h1v1h-1zM4 46h7v1h-7zM12 46h2v1h-2zM15 46h3v1h-3zM21 46h1v1h-1zM28 46h2v1h-2zM32 46h1v1h-1zM34 46h1v1h-1zM36 46h1v1h-1zM38 46h2v1h-2zM41 46h2v1h-2zM44 46h1v1h-1zM46 46h2v1h-2zM49 46h1v1h-1zM51 46h1v1h-1zM55 46h1v1h-1zM59 46h3v1h-3zM63 46h2v1h-2zM67 46h1v1h-1zM0 47h1v1h-1zM3 47h2v1h-2zM7 47h1v1h-1zM9 47h1v1h-1zM11 47h1v1h-1zM13 47h1v1h-1zM15 47h2v1h-2zM18 47h3v1h-3zM22 47h4v1h-4zM28 47h1v1h-1zM30 47h1v1h-1zM33 47h2v1h-2zM36 47h2v1h-2zM40 47h1v1h-1zM42 47h1v1h-1zM46 47h1v1h-1zM52 47h1v1h-1zM54 47h1v1h-1zM58 47h2v1h-2zM62 47h6v1h-6zM3 48h1v1h-1zM6 48h3v1h-3zM10 48h6v1h-6zM17 48h1v1h-1zM19 48h2v1h-2zM25 48h6v1h-6zM34 48h3v1h-3zM38 48h2v1h-2zM41 48h1v1h-1zM45 48h1v1h-1zM48 48h2v1h-2zM53 48h1v1h-1zM55 48h1v1h-1zM57 48h2v1h-2zM60 48h5v1h-5zM68 48h1v1h-1zM0 49h1v1h-1zM3 49h1v1h-1zM8 49h1v1h-1zM12 49h2v1h-2zM21 49h3v1h-3zM30 49h1v1h-1zM32 49h2v1h-2zM35 49h1v1h-1zM39 49h2v1h-2zM42 49h2v1h-2zM48 49h2v1h-2zM52 49h5v1h-5zM58 49h1v1h-1zM62 49h1v1h-1zM65 49h1v1h-1zM67 49h2v1h-2zM0 50h1v1h-1zM4 50h1v1h-1zM6 50h1v1h-1zM12 50h1v1h-1zM14 50h1v1h-1zM16 50h2v1h-2zM21 50h6v1h-6zM29 50h2v1h-2zM33 50h1v1h-1zM40 50h1v1h-1zM43 50h3v1h-3zM47 50h1v1h-1zM57 50h1v1h-1zM61 50h1v1h-1zM63 50h1v1h-1zM65 50h2v1h-2zM1 51h4v1h-4zM8 51h1v1h-1zM10 51h1v1h-1zM12 51h2v1h-2zM16 51h3v1h-3zM20 51h1v1h-1zM24 51h3v1h-3zM30 51h4v1h-4zM35 51h2v1h-2zM40 51h7v1h-7zM48 51h1v1h-1zM50 51h6v1h-6zM59 51h2v1h-2zM62 51h1v1h-1zM64 51h1v1h-1zM66 51h3v1h-3zM0 52h3v1h-3zM5 52h3v1h-3zM9 52h3v1h-3zM13 52h2v1h-2zM17 52h3v1h-3zM24 52h1v1h-1zM28 52h4v1h-4zM33 52h2v1h-2zM36 52h2v1h-2zM39 52h1v1h-1zM45 52h1v1h-1zM47 52h3v1h-3zM53 52h2v1h-2zM57 52h2v1h-2zM60 52h3v1h-3zM64 52h1v1h-1zM66 52h1v1h-1zM68 52h1v1h-1zM0 53h2v1h-2zM4 53h1v1h-1zM9 53h5v1h-5zM16 53h1v1h-1zM23 53h1v1h-1zM25 53h1v1h-1zM27 53h1v1h-1zM31 53h2v1h-2zM35 53h2v1h-2zM39 53h5v1h-5zM45 53h1v1h-1zM47 53h3v1h-3zM52 53h4v1h-4zM59 53h4v1h-4zM65 53h1v1h-1zM67 53h2v1h-2zM0 54h1v1h-1zM2 54h2v1h-2zM5 54h2v1h-2zM8 54h3v1h-3zM13 54h2v1h-2zM16 54h5v1h-5zM22 54h3v1h-3zM26 54h2v1h-2zM29 54h1v1h-1zM33 54h1v1h-1zM35 54h1v1h-1zM37 54h1v1h-1zM40 54h1v1h-1zM42 54h2v1h-2zM45 54h1v1h-1zM50 54h1v1h-1zM52 54h1v1h-1zM57 54h1v1h-1zM61 54h1v1h-1zM65 54h2v1h-2zM68 54h1v1h-1zM0 55h1v1h-1zM5 55h1v1h-1zM7 55h1v1h-1zM9 55h2v1h-2zM13 55h2v1h-2zM16 55h2v1h-2zM19 55h1v1h-1zM21 55h1v1h-1zM23 55h4v1h-4zM28 55h2v1h-2zM31 55h1v1h-1zM33 55h1v1h-1zM35 55h2v1h-2zM38 55h2v1h-2zM42 55h1v1h-1zM47 55h1v1h-1zM50 55h4v1h-4zM56 55h2v1h-2zM61 55h1v1h-1zM63 55h1v1h-1zM66 55h1v1h-1zM0 56h3v1h-3zM6 56h5v1h-5zM16 56h5v1h-5zM23 56h3v1h-3zM28 56h1v1h-1zM30 56h1v1h-1zM32 56h3v1h-3zM36 56h1v1h-1zM38 56h1v1h-1zM40 56h2v1h-2zM45 56h1v1h-1zM49 56h1v1h-1zM55 56h1v1h-1zM57 56h1v1h-1zM59 56h2v1h-2zM64 56h1v1h-1zM66 56h1v1h-1zM2 57h2v1h-2zM5 57h1v1h-1zM7 57h1v1h-1zM10 57h4v1h-4zM15 57h2v1h-2zM18 57h1v1h-1zM22 57h1v1h-1zM27 57h2v1h-2zM31 57h2v1h-2zM34 57h1v1h-1zM37 57h1v1h-1zM39 57h3v1h-3zM43 57h2v1h-2zM48 57h2v1h-2zM52 57h2v1h-2zM57 57h2v1h-2zM60 57h2v1h-2zM63 57h1v1h-1zM66 57h2v1h-2zM0 58h1v1h-1zM2 58h1v1h-1zM4 58h4v1h-4zM9 58h1v1h-1zM14 58h1v1h-1zM16 58h1v1h-1zM18 58h3v1h-3zM22 58h4v1h-4zM27 58h1v1h-1zM33 58h1v1h-1zM35 58h2v1h-2zM40 58h3v1h-3zM44 58h1v1h-1zM48 58h1v1h-1zM50 58h1v1h-1zM54 58h2v1h-2zM67 58h2v1h-2zM0 59h1v1h-1zM8 59h2v1h-2zM12 59h1v1h-1zM15 59h2v1h-2zM21 59h1v1h-1zM24 59h1v1h-1zM26 59h2v1h-2zM29 59h1v1h-1zM33 59h1v1h-1zM35 59h3v1h-3zM39 59h4v1h-4zM46 59h1v1h-1zM48 59h4v1h-4zM53 59h2v1h-2zM56 59h2v1h-2zM61 59h1v1h-1zM63 59h1v1h-1zM65 59h2v1h-2zM0 60h1v1h-1zM3 60h2v1h-2zM6 60h1v1h-1zM9 60h3v1h-3zM15 60h1v1h-1zM17 60h2v1h-2zM21 60h1v1h-1zM23 60h2v1h-2zM27 60h1v1h-1zM29 60h2v1h-2zM32 60h5v1h-5zM41 60h3v1h-3zM46 60h4v1h-4zM54 60h2v1h-2zM57 60h1v1h-1zM59 60h6v1h-6zM66 60h1v1h-1zM8 61h1v1h-1zM10 61h1v1h-1zM15 61h1v1h-1zM21 61h2v1h-2zM24 61h1v1h-1zM27 61h2v1h-2zM31 61h2v1h-2zM36 61h3v1h-3zM40 61h5v1h-5zM48 61h1v1h-1zM51 61h2v1h-2zM54 61h2v1h-2zM57 61h2v1h-2zM60 61h1v1h-1zM64 61h3v1h-3zM0 62h7v1h-7zM9 62h2v1h-2zM13 62h2v1h-2zM16 62h1v1h-1zM21 62h1v1h-1zM26 62h1v1h-1zM29 62h2v1h-2zM32 62h1v1h-1zM34 62h1v1h-1zM36 62h2v1h-2zM39 62h1v1h-1zM42 62h11v1h-11zM54 62h1v1h-1zM56 62h1v1h-1zM58 62h3v1h-3zM62 62h1v1h-1zM64 62h1v1h-1zM66 62h1v1h-1zM68 62h1v1h-1zM0 63h1v1h-1zM6 63h1v1h-1zM8 63h1v1h-1zM10 63h3v1h-3zM14 63h1v1h-1zM16 63h2v1h-2zM22 63h1v1h-1zM26 63h2v1h-2zM31 63h2v1h-2zM36 63h1v1h-1zM39 63h3v1h-3zM48 63h3v1h-3zM52 63h1v1h-1zM54 63h1v1h-1zM56 63h2v1h-2zM60 63h1v1h-1zM64 63h2v1h-2zM67 63h1v1h-1zM0 64h1v1h-1zM2 64h3v1h-3zM6 64h1v1h-1zM8 64h2v1h-2zM11 64h2v1h-2zM15 64h1v1h-1zM17 64h3v1h-3zM22 64h2v1h-2zM25 64h2v1h-2zM28 64h3v1h-3zM32 64h5v1h-5zM41 64h4v1h-4zM50 64h3v1h-3zM54 64h2v1h-2zM57 64h1v1h-1zM60 64h7v1h-7zM0 65h1v1h-1zM2 65h3v1h-3zM6 65h1v1h-1zM8 65h2v1h-2zM14 65h6v1h-6zM22 65h3v1h-3zM26 65h3v1h-3zM30 65h2v1h-2zM33 65h7v1h-7zM41 65h2v1h-2zM44 65h1v1h-1zM47 65h5v1h-5zM56 65h4v1h-4zM62 65h1v1h-1zM66 65h1v1h-1zM0 66h1v1h-1zM2 66h3v1h-3zM6 66h1v1h-1zM8 66h2v1h-2zM11 66h1v1h-1zM15 66h3v1h-3zM20 66h1v1h-1zM25 66h1v1h-1zM27 66h1v1h-1zM29 66h1v1h-1zM31 66h1v1h-1zM34 66h4v1h-4zM42 66h5v1h-5zM48 66h1v1h-1zM51 66h1v1h-1zM53 66h1v1h-1zM55 66h2v1h-2zM58 66h1v1h-1zM61 66h1v1h-1zM64 66h1v1h-1zM66 66h1v1h-1zM0 67h1v1h-1zM6 67h1v1h-1zM9 67h1v1h-1zM11 67h2v1h-2zM14 67h1v1h-1zM17 67h1v1h-1zM20 67h3v1h-3zM25 67h1v1h-1zM27 67h1v1h-1zM34 67h3v1h-3zM38 67h1v1h-1zM41 67h2v1h-2zM44 67h1v1h-1zM47 67h3v1h-3zM52 67h1v1h-1zM54 67h5v1h-5zM60 67h2v1h-2zM63 67h1v1h-1zM0 68h7v1h-7zM8 68h1v1h-1zM12 68h5v1h-5zM18 68h5v1h-5zM24 68h4v1h-4zM29 68h1v1h-1zM31 68h1v1h-1zM35 68h3v1h-3zM41 68h3v1h-3zM45 68h1v1h-1zM47 68h3v1h-3zM51 68h2v1h-2zM54 68h1v1h-1zM57 68h1v1h-1zM60 68h1v1h-1zM63 68h3v1h-3zM67 68h1v1h-1z" fill="#222428"></path>
+        </svg>
+      </div>
+      <div>
+        <h3>Сохраните контакт — пригодится</h3>
+        <p>Наведите камеру телефона на QR-код: в контакты добавятся телефон, почта, Telegram и ссылка на LinkedIn. Когда понадобится независимый взгляд на кредитный риск, портфель или риск-стратегию — я буду в одном клике.</p>
+        <div class="save__row">
+          <button class="btn btn--primary copy" type="button"
+            data-card="Денис Давыдов — управление рисками" data-plabel="Телефон" data-mlabel="E-mail"
+            data-ok="Контакт скопирован — вставьте в заметки или в контакты" data-fail="Скопировать не удалось — отсканируйте QR-код" data-done="Скопировано"
+            data-idle="Скопировать контакт" data-hint="телефон · почта · Telegram · LinkedIn">Скопировать контакт</button>
+          <span class="save__hint">телефон · почта · Telegram · LinkedIn</span>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Денис Давыдов · управление рисками</span><span>Москва</span>
+      <a href="https://t.me/denisdev" target="_blank" rel="noopener">@denisdev</a>
+      <a href="https://www.linkedin.com/in/denisdavydovbanking/" target="_blank" rel="noopener">linkedin.com/in/denisdavydovbanking</a>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var PHONE = "+7 919 729-68-47", MAIL = "denisdavydov.dd@gmail.com", TG = "@denisdev", LI = "https://www.linkedin.com/in/denisdavydovbanking/";
+  document.querySelectorAll('.reveal').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if(!btn.classList.contains('is-shown')){
+        btn.classList.add('is-shown');
+        btn.setAttribute('aria-label', btn.querySelector('.reveal__val').textContent.trim());
+      } else { window.location.href = btn.dataset.href; }
+    });
+  });
+  document.querySelectorAll('.copy').forEach(function(btn){
+    var hint = btn.parentNode.querySelector('.save__hint'), d = btn.dataset;
+    var text = d.card + '\n' + d.plabel + ': ' + PHONE + '\n' + d.mlabel + ': ' + MAIL
+             + '\nTelegram: ' + TG + '\nLinkedIn: ' + LI;
+    btn.addEventListener('click', function(){
+      var done = function(ok){
+        hint.textContent = ok ? d.ok : d.fail;
+        btn.textContent = ok ? d.done : d.idle;
+        setTimeout(function(){ btn.textContent = d.idle; hint.textContent = d.hint; }, 4000);
+      };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){done(true)}, function(){done(false)});
+      } else { done(false); }
+    });
+  });
+  // Inside the claude.ai artifact viewer a plain download link is inert:
+  // route the CV button through the downloads capability when it is available.
+  (async function(){
+    var dl = null;
+    try { dl = (window.claude && window.claude.use) ? await window.claude.use('downloads') : null; } catch(e){ dl = null; }
+    if(!dl) return;
+    document.querySelectorAll('a[data-cv]').forEach(function(a){
+      a.addEventListener('click', function(ev){
+        ev.preventDefault();
+        fetch(a.getAttribute('href')).then(function(r){ return r.blob(); }).then(function(blob){
+          return dl.save({filename: a.dataset.cv, data: blob});
+        }).catch(function(){});
+      });
+    });
+  })();
+
+  var vers = document.querySelectorAll('.ver');
+  if(vers.length > 1){
+    var set = function(lang, remember){
+      vers.forEach(function(v){ v.hidden = (v.dataset.lang !== lang); });
+      document.querySelectorAll('[data-setlang]').forEach(function(b){
+        b.classList.toggle('is-on', b.dataset.setlang === lang);
+      });
+      document.documentElement.lang = lang;
+      if(remember){ try{ localStorage.setItem('ddLang', lang); }catch(e){} }
+      window.scrollTo({top:0, behavior:'auto'});
+    };
+    document.querySelectorAll('[data-setlang]').forEach(function(b){
+      b.addEventListener('click', function(){ set(b.dataset.setlang, true); });
+    });
+    var saved = null; try{ saved = localStorage.getItem('ddLang'); }catch(e){}
+    if(saved === 'en'){ set('en', false); }
+  }
+})();
+</script>
+</body>
+</html>

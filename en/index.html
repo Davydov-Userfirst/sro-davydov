@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Denis Davydov — Risk Management</title>
+<meta name="description" content="Denis Davydov — risk management, banking, credit processes, digital transformation. 20+ years in the banking sector.">
+<meta name="theme-color" content="#25272b">
+<meta property="og:title" content="Denis Davydov — Risk Management">
+<meta property="og:description" content="Risk management | Banking | Restructuring | Corporate finance | Digital transformation. 20+ years in banking.">
+<meta property="og:type" content="profile">
+<link rel="canonical" href="/en/">
+<link rel="alternate" hreflang="ru" href="/ru/">
+<link rel="alternate" hreflang="en" href="/en/">
+<link rel="alternate" hreflang="x-default" href="/ru/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+:root{
+  --paper:#ffffff; --alt:#f6f7f9; --card:#ffffff;
+  --ink:#222428; --graphite:#4a4b4d; --graphite-mid:#6e6f71; --graphite-lt:#9a9b9e;
+  --rule:#e4e6ea;
+  --coral:#ee5a52; --coral-deep:#d9433b; --coral-line:rgba(238,90,82,.26); --coral-wash:rgba(238,90,82,.06);
+  --dark:#25272b; --dark-rule:rgba(255,255,255,.14);
+  --on-dark:#f5f6f7; --on-dark-mid:#c7cbd2; --on-dark-dim:#9ba0a8;
+  --accent-dark:#ff8074;
+  --shadow:0 1px 2px rgba(34,36,40,.05), 0 12px 28px -18px rgba(34,36,40,.28);
+  --mono:"DM Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --sans:"Manrope", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif;
+  --portrait:url(../assets/portrait.webp);
+  --max:1080px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#17191c; --alt:#1e2023; --card:#1e2023;
+    --ink:#ecedf0; --graphite:#c3c6cb; --graphite-mid:#a1a5ab; --graphite-lt:#82868d;
+    --rule:#2d3035;
+    --coral:#ff7f73; --coral-deep:#ff9186; --coral-line:rgba(255,127,115,.32); --coral-wash:rgba(255,127,115,.09);
+    --dark:#101215; --dark-rule:rgba(255,255,255,.12);
+    --accent-dark:#ff9186;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 32px -20px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#17191c; --alt:#1e2023; --card:#1e2023;
+  --ink:#ecedf0; --graphite:#c3c6cb; --graphite-mid:#a1a5ab; --graphite-lt:#82868d;
+  --rule:#2d3035;
+  --coral:#ff7f73; --coral-deep:#ff9186; --coral-line:rgba(255,127,115,.32); --coral-wash:rgba(255,127,115,.09);
+  --dark:#101215; --dark-rule:rgba(255,255,255,.12);
+  --accent-dark:#ff9186;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 32px -20px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{margin:0; text-wrap:balance; letter-spacing:-.02em; font-weight:800; line-height:1.14}
+p{margin:0}
+a{color:inherit}
+ul{margin:0; padding:0; list-style:none}
+:focus-visible{outline:2px solid var(--coral); outline-offset:3px; border-radius:4px}
+
+.wrap{width:100%; max-width:var(--max); margin:0 auto; padding-inline:20px}
+.section{padding-block:clamp(44px,7vw,84px)}
+.section--alt{background:var(--alt); border-block:1px solid var(--rule)}
+
+.kicker{
+  font-family:var(--sans); font-weight:600; font-size:11.5px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--coral-deep); margin-bottom:14px;
+  display:flex; align-items:center; gap:10px;
+}
+.kicker::after{content:""; flex:1; height:1px; background:var(--coral-line); max-width:120px}
+.h2{font-size:clamp(25px,3.4vw,36px)}
+.lead{margin-top:14px; max-width:62ch; color:var(--graphite-mid); font-size:16.5px}
+
+/* ---------- top bar ---------- */
+.bar{
+  position:sticky; top:env(safe-area-inset-top, 0px); z-index:40;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.bar__in{display:flex; align-items:center; gap:18px; min-height:54px}
+.bar__name{font-weight:800; font-size:15px; letter-spacing:-.01em; margin-right:auto}
+.bar__name span{color:var(--coral)}
+.bar__nav{display:flex; gap:18px; font-size:13.5px; color:var(--graphite-mid)}
+.bar__nav a{text-decoration:none}
+.bar__nav a:hover{color:var(--coral-deep)}
+@media (max-width:860px){ .bar__nav{display:none} }
+
+.langs{display:flex; align-items:center; border:1px solid var(--rule); border-radius:9px; overflow:hidden; flex:none}
+.langs a, .langs button{
+  font-family:var(--sans); font-weight:700; font-size:12.5px; letter-spacing:.06em;
+  padding:7px 11px; border:0; background:transparent; color:var(--graphite-mid);
+  text-decoration:none; cursor:pointer; line-height:1;
+}
+.langs a + a, .langs button + button{border-left:1px solid var(--rule)}
+.langs .is-on{background:var(--coral); color:#fff}
+.langs a:not(.is-on):hover, .langs button:not(.is-on):hover{color:var(--coral-deep); background:var(--coral-wash)}
+
+/* ---------- hero ---------- */
+.hero{position:relative; background:var(--dark); color:var(--on-dark); overflow:hidden; isolation:isolate}
+.hero__bg{position:absolute; inset:0; z-index:0; pointer-events:none}
+.hero__bg svg{width:100%; height:100%; display:block}
+.hero__bg::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(100deg, var(--dark) 6%, rgba(37,39,43,.86) 34%, rgba(37,39,43,.25) 58%, transparent 74%);
+}
+.hero__glow{
+  position:absolute; z-index:0; width:min(620px,80vw); aspect-ratio:1; right:-12%; top:-18%;
+  background:radial-gradient(circle, rgba(238,90,82,.24), rgba(238,90,82,0) 66%); pointer-events:none;
+}
+.hero__in{
+  position:relative; z-index:2;
+  display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:clamp(20px,4vw,56px);
+  align-items:end; padding-block:clamp(40px,6vw,66px) 0;
+}
+.hero h1{font-size:clamp(38px,7.2vw,68px); letter-spacing:-.035em}
+.hero__role{
+  display:flex; flex-wrap:wrap; gap:4px 12px; margin-top:20px; max-width:52ch;
+  font-size:clamp(14.5px,1.7vw,16.5px); font-weight:600; line-height:1.5; color:var(--on-dark);
+}
+.hero__role li{display:flex; align-items:baseline; gap:12px}
+.hero__role li:not(:last-child)::after{content:"|"; color:var(--accent-dark); font-weight:500; opacity:.85}
+.hero__sum{margin-top:20px; color:var(--on-dark-mid); max-width:54ch; font-size:15.5px}
+.hero__facts{display:flex; flex-wrap:wrap; gap:8px; margin-top:24px}
+.fact{
+  font-family:var(--sans); font-size:12.5px; font-weight:500; color:var(--on-dark-mid);
+  border:1px solid var(--dark-rule); border-radius:999px; padding:6px 13px; background:rgba(255,255,255,.04);
+}
+.hero__cta{display:flex; flex-wrap:wrap; gap:10px 12px; align-items:center; margin-top:26px; padding-bottom:clamp(34px,5vw,56px)}
+.hero__portrait{position:relative; align-self:end; margin-bottom:-1px}
+.portrait{
+  width:100%; aspect-ratio:800 / 1466; max-width:100%;
+  background:var(--portrait) center bottom / contain no-repeat;
+  filter:drop-shadow(0 26px 50px rgba(0,0,0,.55));
+}
+.hero__portrait::before{
+  content:""; position:absolute; inset:auto 6% 0 6%; height:62%; z-index:-1;
+  background:linear-gradient(to top, rgba(238,90,82,.10), transparent);
+  border-radius:50% 50% 0 0 / 22% 22% 0 0;
+}
+.hero__band{position:relative; z-index:2; border-top:1px solid var(--dark-rule); background:rgba(0,0,0,.2)}
+.hero__formulas{
+  display:flex; gap:10px 28px; flex-wrap:wrap; padding-block:13px;
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.02em; color:rgba(255,255,255,.42);
+}
+.hero__formulas span{white-space:nowrap}
+.hero__formulas i{font-style:normal; color:var(--accent-dark)}
+@media (max-width:860px){
+  .hero__in{grid-template-columns:minmax(0,1fr); align-items:start}
+  .hero__portrait{max-width:250px; margin-inline:auto; margin-top:-10px}
+  .hero__cta{padding-bottom:26px}
+  .hero__formulas{font-size:11px; gap:8px 20px}
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex; align-items:center; gap:9px; cursor:pointer;
+  font-family:var(--sans); font-size:14.5px; font-weight:600; line-height:1;
+  padding:12px 18px; border-radius:10px; border:1px solid transparent; text-decoration:none;
+  transition:transform .14s ease, background-color .14s ease, border-color .14s ease, color .14s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:17px; height:17px; flex:none; fill:currentColor}
+.btn--primary{background:var(--coral); color:#fff}
+.btn--primary:hover{background:var(--coral-deep)}
+.btn--cv{
+  font-size:16.5px; font-weight:700; padding:16px 26px; border-radius:12px; letter-spacing:-.01em;
+  box-shadow:0 12px 28px -14px rgba(238,90,82,.75);
+}
+.btn--cv svg{width:20px; height:20px}
+.btn--outline{border-color:var(--accent-dark); color:var(--accent-dark); background:transparent}
+.btn--outline:hover{background:var(--accent-dark); color:#1b1d20}
+.btn--ghost-dark{border-color:var(--dark-rule); color:var(--on-dark); background:rgba(255,255,255,.05)}
+.btn--ghost-dark:hover{border-color:var(--accent-dark); color:#fff}
+
+/* ---------- metrics ---------- */
+.metrics{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; background:var(--rule);
+  border:1px solid var(--rule); border-radius:14px; overflow:hidden; margin-top:30px}
+.metric{background:var(--card); padding:22px 20px 20px; display:flex; flex-direction:column; gap:8px}
+.metric__label{font-family:var(--sans); font-weight:600; font-size:11.5px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--graphite-lt)}
+.metric__value{
+  font-size:clamp(30px,4vw,40px); font-weight:800; letter-spacing:-.04em; line-height:1;
+  font-variant-numeric:tabular-nums; color:var(--ink);
+}
+.metric__value b{color:var(--coral); font-weight:800}
+.metric__value .u{font-size:.6em}
+.metric__value .u2{font-size:.5em; font-weight:700}
+.metric__value .u3{font-size:.42em; font-weight:700}
+.metric__note{font-size:13.5px; color:var(--graphite-mid); line-height:1.45}
+.metric__delta{
+  font-family:var(--mono); font-size:11.5px; color:var(--graphite-lt);
+  display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-top:auto; padding-top:8px;
+}
+.metric__delta s{text-decoration:line-through; text-decoration-color:var(--coral-line)}
+.metric__delta i{font-style:normal; color:var(--coral-deep)}
+@media (max-width:860px){ .metrics{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:520px){ .metrics{grid-template-columns:minmax(0,1fr)} }
+
+/* ---------- experience ---------- */
+.jobs{margin-top:34px; display:flex; flex-direction:column}
+.job{display:grid; grid-template-columns:210px minmax(0,1fr); gap:clamp(16px,3vw,40px);
+  padding-block:30px; border-top:1px solid var(--rule)}
+.job:first-child{border-top:2px solid var(--ink)}
+.job__when{font-size:13.5px; color:var(--graphite-mid); line-height:1.6; font-variant-numeric:tabular-nums}
+.job__when b{display:block; color:var(--ink); font-weight:700; letter-spacing:.01em; font-size:14px}
+.job__org{margin-top:8px; font-size:13.5px; color:var(--graphite-lt); display:block}
+.job h3{font-size:clamp(19px,2.4vw,23px)}
+.job__sub{margin-top:6px; font-size:14px; color:var(--coral-deep); font-weight:600}
+.job__text{margin-top:12px; color:var(--graphite); font-size:15.5px; max-width:64ch}
+.block{margin-top:20px}
+.block--industry{margin-top:30px}
+.block__title{font-family:var(--sans); font-weight:600; font-size:11.5px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--graphite-lt); margin-bottom:10px}
+.list li{position:relative; padding-left:18px; margin-bottom:8px; font-size:15px; color:var(--graphite); max-width:66ch}
+.list li::before{content:""; position:absolute; left:0; top:.62em; width:7px; height:1.5px; background:var(--graphite-lt)}
+.list--win li{color:var(--ink)}
+.list--win li::before{background:var(--coral); width:9px; height:2px}
+.list--win b{font-variant-numeric:tabular-nums}
+.aside{
+  margin-top:20px; padding-left:16px; border-left:2px solid var(--coral-line);
+  font-size:14.5px; color:var(--coral-deep); font-weight:500; max-width:66ch;
+}
+@media (max-width:760px){
+  .job{grid-template-columns:minmax(0,1fr); gap:14px}
+  .job__when{display:flex; flex-wrap:wrap; gap:6px 14px; align-items:baseline}
+  .job__when b{display:inline}
+  .job__org{margin-top:0}
+}
+
+/* ---------- competencies ---------- */
+.comps{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px; background:var(--rule);
+  border:1px solid var(--rule); border-radius:14px; overflow:hidden; margin-top:26px}
+.comp{background:var(--card); padding:22px 20px}
+.comp h3{font-size:16px; letter-spacing:-.01em}
+.comp p{margin-top:8px; font-size:14.5px; color:var(--graphite-mid)}
+.comp__tag{font-family:var(--sans); font-weight:600; font-size:11px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--coral); display:block; margin-bottom:9px}
+@media (max-width:620px){ .comps{grid-template-columns:minmax(0,1fr)} }
+
+.auto{
+  margin-top:26px; border:1px solid var(--coral-line); border-left:3px solid var(--coral);
+  border-radius:12px; background:var(--card); padding:24px clamp(20px,3vw,28px); box-shadow:var(--shadow);
+}
+.auto__tag{font-family:var(--sans); font-weight:600; font-size:11px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--coral); display:block; margin-bottom:9px}
+.auto h3{font-size:clamp(18px,2.3vw,22px)}
+.auto p{margin-top:10px; color:var(--graphite-mid); font-size:15px; max-width:70ch}
+.auto ul{margin-top:16px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 26px}
+@media (max-width:640px){ .auto ul{grid-template-columns:minmax(0,1fr)} }
+
+.chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:26px}
+.chip{
+  font-family:var(--sans); font-size:12.5px; font-weight:500; color:var(--graphite);
+  border:1px solid var(--rule); background:var(--card); border-radius:8px; padding:7px 11px;
+}
+.chip--accent{border-color:var(--coral-line); color:var(--coral-deep); font-weight:600}
+
+/* ---------- profile grid ---------- */
+.grid3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:26px; margin-top:30px}
+@media (max-width:780px){ .grid3{grid-template-columns:minmax(0,1fr); gap:22px} }
+.pane h3{font-family:var(--sans); font-weight:600; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--graphite-lt); font-size:11.5px; padding-bottom:10px; border-bottom:1px solid var(--rule)}
+.pane dl{margin:0; display:flex; flex-direction:column}
+.pane dt{margin-top:14px; font-weight:700; font-size:15px}
+.pane dd{margin:3px 0 0; font-size:14px; color:var(--graphite-mid)}
+.pane dd .num{font-variant-numeric:tabular-nums; color:var(--graphite-lt)}
+
+/* ---------- contacts ---------- */
+.contact{background:var(--dark); color:var(--on-dark); position:relative; overflow:hidden}
+.contact .kicker{color:var(--accent-dark)}
+.contact .kicker::after{background:var(--dark-rule)}
+.contact__lead{margin-top:14px; color:var(--on-dark-mid); max-width:54ch; font-size:16px}
+.contact__actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:26px}
+.reveal .reveal__val{display:none}
+.reveal.is-shown .reveal__val{display:inline; font-family:var(--mono); font-size:14px}
+.reveal.is-shown .reveal__lbl{display:none}
+.contact__meta{margin-top:16px; font-family:var(--sans); font-weight:600; font-size:11.5px;
+  letter-spacing:.11em; color:var(--on-dark-dim); text-transform:uppercase}
+.save{
+  margin-top:32px; display:grid; grid-template-columns:144px minmax(0,1fr); gap:22px; align-items:center;
+  border:1px solid var(--dark-rule); background:rgba(255,255,255,.04); border-radius:16px; padding:22px; max-width:660px;
+}
+.save__qr{background:#fff; border-radius:10px; padding:10px; line-height:0}
+.save__qr svg{width:100%; height:auto; display:block}
+.save h3{font-size:18px}
+.save p{margin-top:8px; font-size:14px; color:var(--on-dark-mid)}
+.save__row{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:14px}
+.save__hint{font-size:12.5px; color:var(--on-dark-dim)}
+@media (max-width:560px){ .save{grid-template-columns:minmax(0,1fr); justify-items:start} .save__qr{width:150px} }
+.foot{border-top:1px solid var(--dark-rule); margin-top:clamp(34px,6vw,54px); padding-top:18px;
+  display:flex; flex-wrap:wrap; gap:8px 20px; align-items:baseline; font-size:12.5px; color:var(--on-dark-dim)}
+.foot a{color:var(--on-dark-mid); text-decoration:none}
+.foot a:hover{color:var(--accent-dark)}
+
+/* ---------- motion ---------- */
+.draw{stroke-dasharray:1400; stroke-dashoffset:1400; animation:draw 2.4s .25s cubic-bezier(.22,.7,.3,1) forwards}
+.draw--2{animation-duration:2.9s; animation-delay:.45s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.rise{animation:rise 1.1s .1s cubic-bezier(.22,.7,.3,1) both}
+@keyframes rise{from{opacity:.55; transform:translateY(10px)} to{opacity:1; transform:none}}
+@media (prefers-reduced-motion: reduce){
+  .draw,.draw--2{animation:none; stroke-dashoffset:0}
+  .rise{animation:none}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap bar__in">
+    <div class="bar__name">Denis Davydov <span>·</span> risk management</div>
+    <nav class="bar__nav"><a href="#results">Results</a><a href="#experience">Experience</a><a href="#skills">Expertise</a><a href="#profile">Profile</a><a href="#contact">Contact</a></nav>
+    <div class="langs" role="group" aria-label="Language"><a class="is-on" href="./" aria-current="page">EN</a><a href="../ru/" hreflang="ru">RU</a></div>
+  </div>
+</header>
+<section class="hero">
+  <div class="hero__glow"></div>
+  <div class="hero__bg" aria-hidden="true"><svg viewBox="0 0 1200 620" preserveAspectRatio="xMidYMax slice" role="presentation">
+      <defs>
+        <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+          <path d="M48 0H0v48" fill="none" stroke="rgba(255,255,255,.055)" stroke-width="1"/>
+        </pattern>
+        <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+        <mask id="gridmask"><rect width="1200" height="620" fill="url(#fade)"/></mask>
+        <linearGradient id="corArea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ee5a52" stop-opacity=".22"/><stop offset="1" stop-color="#ee5a52" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="620" fill="url(#grid)" mask="url(#gridmask)"/>
+      <path class="draw" d="M300 520 C 420 518 500 506 570 472 C 645 438 700 350 740 252 C 776 166 820 116 900 102"
+            fill="none" stroke="rgba(255,128,116,.45)" stroke-width="2"/>
+      <path d="M300 330 L 380 322 L 460 336 L 540 298 L 620 276 L 700 244 L 780 226 L 860 180 L 860 520 L 300 520 Z"
+            fill="url(#corArea)" opacity=".55"/>
+      <path class="draw draw--2" d="M300 330 L 380 322 L 460 336 L 540 298 L 620 276 L 700 244 L 780 226 L 860 180"
+            fill="none" stroke="rgba(238,90,82,.75)" stroke-width="2.5" stroke-linejoin="round"/>
+      <circle cx="860" cy="180" r="4.5" fill="#ee5a52"/>
+      <circle cx="860" cy="180" r="10" fill="none" stroke="rgba(238,90,82,.4)" stroke-width="1.5"/>
+      <g fill="rgba(255,255,255,.08)">
+        <rect x="820" y="470" width="320" height="16" rx="3"/><rect x="852" y="500" width="256" height="16" rx="3"/>
+        <rect x="884" y="530" width="192" height="16" rx="3"/><rect x="916" y="560" width="128" height="16" rx="3"/>
+      </g>
+      <g fill="rgba(238,90,82,.35)">
+        <rect x="820" y="470" width="196" height="16" rx="3"/><rect x="852" y="500" width="150" height="16" rx="3"/>
+        <rect x="884" y="530" width="104" height="16" rx="3"/><rect x="916" y="560" width="58" height="16" rx="3"/>
+      </g>
+      <g font-family="DM Mono, monospace" font-size="11" fill="rgba(255,255,255,.22)" letter-spacing="1">
+        <text x="300" y="544">portfolio</text><text x="892" y="106">score</text>
+        <text x="882" y="176">CoR</text><text x="820" y="452">risk-strategy funnel</text>
+      </g>
+    </svg></div>
+  <div class="wrap hero__in">
+    <div class="rise">
+      <h1>Denis&nbsp;Davydov</h1>
+      <ul class="hero__role"><li>Risk management</li><li>Banking</li><li>Restructuring</li><li>Corporate finance</li><li>Project management</li><li>Credit processes</li><li>Digital transformation</li><li>Process optimisation</li><li>AI-based risk management tools</li></ul>
+      <p class="hero__sum">20+ years in the banking sector, including 9 years in risk expertise and portfolio monitoring for corporate clients, and the last 4 years leading the retail risk function (a division of 55). Owned credit decision strategy, scoring and anti-fraud, IRB methodology, and management reporting on PD, LGD, EAD, AR, RR and CoR.</p>
+      <ul class="hero__facts"><li class="fact">Moscow</li><li class="fact">20+ yrs in banking</li><li class="fact">Teams of up to 55</li><li class="fact">English · C1</li><li class="fact">Python · SQL</li></ul>
+      <div class="hero__cta">
+        <a class="btn btn--outline" href="#contact">Contact</a>
+        <a class="btn btn--primary btn--cv" href="../files/Davydov_Denis_CV_EN.pdf" download data-cv="Davydov_Denis_CV_EN.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 0 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 0 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1zM4 19a1 1 0 0 1 1-1h14a1 1 0 0 1 0 2H5a1 1 0 0 1-1-1z"></path></svg>Download CV</a>
+        <a class="btn btn--ghost-dark" href="https://t.me/denisdev" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"></path></svg>Telegram</a>
+      </div>
+    </div>
+    <div class="hero__portrait">
+      <div class="portrait" role="img" aria-label="Denis Davydov"></div>
+    </div>
+  </div>
+  <div class="hero__band"><div class="wrap hero__formulas" aria-hidden="true"><span><i>EL</i> = PD × LGD × EAD</span><span><i>CoR</i> = EL / EAD</span><span><i>AR</i> = approved / applications</span><span><i>RR</i> = recovery / EAD</span><span><i>IRB</i> · internal ratings</span></div></div>
+</section>
+<section class="section section--alt" id="results">
+  <div class="wrap">
+    <p class="kicker">Results</p>
+    <h2 class="h2">My work in numbers</h2>
+    <p class="lead">Key effects from the last two roles: moving retail underwriting to automated decisions, rebuilding the risk strategy, and holding turnaround discipline on corporate risk reviews.</p>
+    <div class="metrics"><article class="metric">
+        <p class="metric__label">Manual underwriting</p>
+        <p class="metric__value"><b>≈0<span class="u">%</span></b></p>
+        <p class="metric__note">Completed the transition to an automated decision-making process for retail applications.</p>
+        <p class="metric__delta"><s>manual review</s> <i>→</i> automated decision</p>
+      </article><article class="metric">
+        <p class="metric__label">Decision time</p>
+        <p class="metric__value">15 <span class="u2">min</span></p>
+        <p class="metric__note">Average time to a credit decision on an application after process automation.</p>
+        <p class="metric__delta"><s>2 days</s> <i>→</i> 15 minutes</p>
+      </article><article class="metric">
+        <p class="metric__label">Approval Rate</p>
+        <p class="metric__value"><b>+10</b> <span class="u3">pp</span></p>
+        <p class="metric__note">Effect of the updated risk strategy with no increase in portfolio risk level.</p>
+        <p class="metric__delta">CoR on new originations <i>&lt; 1%</i></p>
+      </article><article class="metric">
+        <p class="metric__label">Investment deals</p>
+        <p class="metric__value">Top-20</p>
+        <p class="metric__note">Contributed to structuring investment-project financing for the largest clients in the bank's loan portfolio.</p>
+        <p class="metric__delta">agribusiness <i>·</i> residential construction <i>·</i> M&amp;A</p>
+      </article><article class="metric">
+        <p class="metric__label">Risk review SLA</p>
+        <p class="metric__value">95<span class="u">%</span></p>
+        <p class="metric__note">SLA compliance on corporate deal review turnaround, including peak workload periods.</p>
+        <p class="metric__delta">team of <i>15</i> risk managers</p>
+      </article><article class="metric">
+        <p class="metric__label">Anti-fraud replacement</p>
+        <p class="metric__value">1 <span class="u3">framework</span></p>
+        <p class="metric__note">Application anti-fraud moved onto new software: from business requirements and vendor selection through to process migration.</p>
+        <p class="metric__delta">requirements <i>→</i> selection <i>→</i> migration</p>
+      </article></div>
+  </div>
+</section>
+<section class="section" id="experience">
+  <div class="wrap">
+    <p class="kicker">Experience</p>
+    <h2 class="h2">Employment</h2>
+    <div class="jobs"><article class="job">
+        <div class="job__when"><b>Sep 2022 — Jul 2026</b><span class="job__org">Russian Agriculture Bank, Moscow</span></div>
+        <div>
+          <h3>Head of Retail Risk / CRO</h3><p class="job__sub">Division of 55 employees</p>
+          <p class="job__text">Overall leadership of the retail risk function: methodology, risk analytics and risk technology, underwriting, and engagement with credit bureaus.</p><div class="block"><p class="block__title">Scope of responsibility</p><ul class="list"><li>credit decision strategy and limit policy across the full retail lending product line</li><li>procedures for applying scoring models and application routing schemes</li><li>anti-fraud framework for credit applications</li><li>coordination of risk methodology development and risk modelling for the IRB approach</li><li>management reporting on risk levels and the risk-strategy funnel using PD, LGD, EAD, AR, RR, CoR and other metrics</li><li>assessment of the feasibility and economic impact of connecting external and internal data sources</li></ul></div><div class="block"><p class="block__title">Key achievements</p><ul class="list list--win"><li>completed the transition to an automated decision-making process: the share of manual underwriting reduced to nearly <b>0%</b>, average decision time cut from <b>2 days to 15 minutes</b></li><li><b>+10 pp</b> to the Approval Rate under the updated risk strategy with no increase in risk level (CoR on new originations <b>&lt; 1%</b>)</li><li>delivered the import substitution of the application anti-fraud system: from business requirements and vendor selection through to migrating processes onto the new software</li><li>built management reporting on risk levels and the risk-strategy funnel in PD, LGD, EAD, AR, RR and CoR metrics — a single view of risk for the business and the committees</li></ul></div><p class="aside">From December 2024 to February 2026, concurrently headed the Financial Risk Department: market risk, liquidity risk, IRRBB and stress testing. Member of the Retail Business Development Committee (since September 2022) and the Asset and Liability Committee, ALCO (since December 2024).</p>
+        </div>
+      </article><article class="job">
+        <div class="job__when"><b>Jul 2016 — Sep 2022</b><span class="job__org">Russian Agriculture Bank, Moscow</span></div>
+        <div>
+          <h3>Deputy Head of Corporate Credit Risk Assessment Department, CIB</h3><p class="job__sub">Career path: Chief Specialist → Head of Unit → Deputy Head of Department</p>
+          <p class="job__text">Organising risk expertise for credit decisions on CIB clients, leading a team of 15 corporate risk managers, and developing approaches to industry and client risk assessment.</p><div class="block"><p class="block__title">Scope of responsibility</p><ul class="list"><li>assessment of the Bank's credit and market risk exposure on complex credit transactions, participation in structuring corporate lending deals, administration of the bank's credit policy</li><li>proposals on the covenant package, monitoring covenant compliance, analysis of breach causes and measures to mitigate risk</li><li>analysis of borrowers' and groups' financial and operating performance (RAS, IFRS), building and reviewing financial models, forecast balance sheets, P&amp;L and cash flows</li><li>control over the volume of non-performing exposure, identification of clients requiring heightened attention, recommendations on distressed debt recovery strategy</li><li>presenting the risk position at credit committees and in interaction with the bank's business units</li><li>methodology and the internal regulatory framework, monitoring of lending activity across branches, training and mentoring of risk managers</li></ul></div><div class="block"><p class="block__title">Key achievements</p><ul class="list list--win"><li>maintained <b>95%</b> SLA compliance, including during peak workload periods</li><li>contributed to structuring transactions financing investment projects in agribusiness and multi-unit residential construction, as well as M&amp;A deals, for <b>top-20</b> clients in the Bank's loan portfolio</li><li>implemented a platform for collecting, recording, storing and analysing Credit Risk Premium (CRP) values — substantially reducing the time spent retrieving information from unstructured sources</li><li>automated the collection of daily risk reporting in Java — a transparent view of risk managers' workload and control over review turnaround SLAs</li><li>initiated a review of hedging approaches for transactions involving financial instruments and expanded limit capacity in favour of derivatives</li></ul></div>
+        </div>
+      </article><article class="job">
+        <div class="job__when"><b>Jun 2006 — Jul 2015</b><span class="job__org">Russian banks · Orenburg, Moscow</span></div>
+        <div>
+          <h3>Financial Analyst → Head of Credit Unit</h3>
+          <p class="job__text">Corporate lending: analysis of borrowers' financial and operating performance, preparation of credit opinions, then leadership of the credit unit.</p>
+        </div>
+      </article></div>
+  </div>
+</section>
+<section class="section section--alt" id="skills">
+  <div class="wrap">
+    <p class="kicker">Expertise</p>
+    <h2 class="h2">My professional field</h2>
+    <p class="lead">The full risk-function cycle across two segments: the corporate portfolio — from borrower reporting analysis to deal structure; retail — from scoring strategy to the decision funnel and anti-fraud.</p>
+    <div class="comps"><article class="comp">
+        <span class="comp__tag">Corporate risk</span>
+        <h3>Analysis of corporate and group financial performance</h3>
+        <p>RAS and IFRS, analytical adjustments to statements, assessment of connected borrower groups.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Corporate risk</span>
+        <h3>Financial models and stress testing</h3>
+        <p>Scenario analysis, cash-flow modelling, forecast balance sheets and P&amp;L, model validation.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Corporate risk</span>
+        <h3>Deal structuring and independent risk review</h3>
+        <p>Complex corporate transactions, internal credit ratings, restructuring, assessment of the impact of decisions on the bank's financial result.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Portfolio</span>
+        <h3>Portfolio monitoring and covenants</h3>
+        <p>Identification of distressed clients and clients requiring heightened attention; the covenant package: design, monitoring and handling of breaches.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Retail risk</span>
+        <h3>Retail risk strategy and limit policy</h3>
+        <p>Credit decision strategy across the full retail lending product line, management of Approval Rate and the cost of risk on new originations.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Retail risk</span>
+        <h3>Scoring, application routing and anti-fraud</h3>
+        <p>Procedures for applying scoring models, routing schemes, the application anti-fraud framework, work with credit bureaus and data sources.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Retail risk</span>
+        <h3>IRB: methodology and modelling</h3>
+        <p>Coordination of methodology and model development for the move to the internal ratings-based approach, validation and model quality control.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Reporting</span>
+        <h3>Risk metrics and management reporting</h3>
+        <p>The risk-strategy funnel and risk levels in PD, LGD, EAD, AR, RR and CoR; reporting for the business, the committees and ALCO.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Methodology</span>
+        <h3>Methodology and the internal regulatory framework</h3>
+        <p>Credit policy, internal regulations, credit process rules and their optimisation.</p>
+      </article><article class="comp">
+        <span class="comp__tag">Team</span>
+        <h3>Team leadership and mentoring</h3>
+        <p>Teams of up to 55 people, employee training, presenting the risk position at credit committees.</p>
+      </article></div>
+    <div class="auto">
+      <span class="auto__tag">Dedicated track</span>
+      <h3>Automation and digital transformation of risk processes</h3>
+      <p>I run these programmes end to end: business requirements, vendor selection, acceptance testing, migration, and control over the effect on turnaround, risk and process cost.</p>
+      <ul class="list"><li>automated credit decisioning: rules, routing, moving away from manual underwriting</li><li>import substitution and implementation of application anti-fraud systems</li><li>a platform for recording and analysing Credit Risk Premium (CRP) values</li><li>automation of daily risk reporting and SLA control</li><li>assessment of the economic impact of connecting data sources</li><li>AI-based risk management tools, Python / SQL analytics stack</li></ul>
+    </div>
+    <div class="chips"><span class="chip chip--accent">PD · LGD · EAD</span><span class="chip chip--accent">AR · RR · CoR</span><span class="chip">IRB</span><span class="chip">RAS / IFRS</span><span class="chip">Scoring &amp; routing</span><span class="chip">Anti-fraud</span><span class="chip">Credit bureaus</span><span class="chip">Covenants</span><span class="chip">Stress testing</span><span class="chip">Restructuring</span><span class="chip">IRRBB</span><span class="chip">ALCO</span><span class="chip">Distressed debt</span></div>
+    <div class="block block--industry">
+      <p class="block__title">Industry expertise</p>
+      <ul class="list"><li>Agribusiness · development and infrastructure · wholesale and retail trade · power generation · oil and gas · transport</li></ul>
+    </div>
+  </div>
+</section>
+<section class="section" id="profile">
+  <div class="wrap">
+    <p class="kicker">Education and tools</p>
+    <h2 class="h2">Profile</h2>
+    <div class="grid3"><div class="pane"><h3>Education</h3><dl><dt>BS, Banking and Financial Support Services</dt><dd>Orenburg State University (OSU), Faculty of Finance and Economics <span class="num">2000 — 2005</span></dd><dt>Postgraduate studies</dt><dd>Orenburg State University (OSU) <span class="num">2005 — 2007</span></dd></dl></div><div class="pane"><h3>Certificates and languages</h3><dl><dt>Google Project Management Professional</dt><dd><span class="num">Dec 2021</span></dd><dt>Financial Modeling Foundations</dt><dd><span class="num">Aug 2020</span></dd><dt>Languages</dt><dd>Russian — native · English — C1 · German — basic</dd></dl></div><div class="pane"><h3>Technology</h3><dl><dt>Analytics stack</dt><dd>Python (pandas, NumPy, JupyterLab), SQL</dd><dt>Development</dt><dd>Basic PHP, JS, HTML; risk reporting automated in Java</dd><dt>Systems</dt><dd>Linux, Windows, Microsoft Office, Prezi, Lotus, CFT banking software</dd><dt>Outside work</dt><dd>Fishing, sport</dd></dl></div></div>
+  </div>
+</section>
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <p class="kicker">Contact</p>
+    <h2 class="h2">Happy to talk</h2>
+    <p class="contact__lead">Telegram is the fastest way to reach me. Before calling, please drop me a message first.</p>
+    <div class="contact__actions">
+      <a class="btn btn--primary" href="https://t.me/denisdev" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"></path></svg>Telegram</a>
+      <a class="btn btn--ghost-dark" href="https://www.linkedin.com/in/denisdavydovbanking/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 21h3.5V8.5H3.2V21zm6.3 0H13v-6.6c0-1.7 1-2.5 2.1-2.5 1.1 0 1.8.8 1.8 2.5V21h3.5v-7c0-3.3-1.8-4.9-4.2-4.9-1.9 0-2.9 1.1-3.2 1.8V8.5H9.5V21z"></path></svg>LinkedIn</a>
+      <button class="btn btn--ghost-dark reveal" type="button" data-href="mailto:denisdavydov.dd@gmail.com" aria-label="Show email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></svg><span class="reveal__lbl">Show email</span><span class="reveal__val">denisdavydov.dd@gmail.com</span>
+      </button>
+      <button class="btn btn--ghost-dark reveal" type="button" data-href="tel:+79197296847" aria-label="Show phone">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg><span class="reveal__lbl">Show phone</span><span class="reveal__val">+7 919 729-68-47</span>
+      </button>
+      <a class="btn btn--ghost-dark" href="../files/Davydov_Denis_CV_EN.pdf" download data-cv="Davydov_Denis_CV_EN.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 0 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 0 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1zM4 19a1 1 0 0 1 1-1h14a1 1 0 0 1 0 2H5a1 1 0 0 1-1-1z"></path></svg>Download CV</a>
+    </div>
+    <p class="contact__meta">Moscow · Telegram @denisdev</p>
+    <div class="save">
+      <div class="save__qr">
+        <svg viewBox="0 0 65 65" shape-rendering="crispEdges" role="img" aria-label="QR code with Denis Davydov's contact details">
+          <rect width="65" height="65" fill="#ffffff"></rect><path d="M0 0h7v1h-7zM8 0h2v1h-2zM11 0h8v1h-8zM20 0h2v1h-2zM24 0h1v1h-1zM29 0h2v1h-2zM34 0h1v1h-1zM37 0h5v1h-5zM44 0h1v1h-1zM46 0h1v1h-1zM49 0h5v1h-5zM55 0h1v1h-1zM58 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM10 1h1v1h-1zM12 1h3v1h-3zM19 1h2v1h-2zM24 1h1v1h-1zM26 1h7v1h-7zM36 1h1v1h-1zM38 1h4v1h-4zM43 1h1v1h-1zM48 1h1v1h-1zM50 1h4v1h-4zM56 1h1v1h-1zM58 1h1v1h-1zM64 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM14 2h3v1h-3zM18 2h1v1h-1zM20 2h3v1h-3zM24 2h1v1h-1zM28 2h2v1h-2zM37 2h1v1h-1zM42 2h8v1h-8zM54 2h1v1h-1zM56 2h1v1h-1zM58 2h1v1h-1zM60 2h3v1h-3zM64 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM8 3h5v1h-5zM15 3h1v1h-1zM17 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM27 3h2v1h-2zM30 3h1v1h-1zM33 3h2v1h-2zM36 3h3v1h-3zM41 3h3v1h-3zM45 3h2v1h-2zM48 3h1v1h-1zM50 3h1v1h-1zM53 3h3v1h-3zM58 3h1v1h-1zM60 3h3v1h-3zM64 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM9 4h1v1h-1zM13 4h3v1h-3zM17 4h7v1h-7zM25 4h3v1h-3zM29 4h6v1h-6zM38 4h3v1h-3zM44 4h2v1h-2zM49 4h3v1h-3zM53 4h1v1h-1zM56 4h1v1h-1zM58 4h1v1h-1zM60 4h3v1h-3zM64 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h1v1h-1zM12 5h1v1h-1zM14 5h3v1h-3zM19 5h1v1h-1zM21 5h1v1h-1zM23 5h1v1h-1zM29 5h2v1h-2zM34 5h5v1h-5zM40 5h1v1h-1zM46 5h4v1h-4zM51 5h4v1h-4zM58 5h1v1h-1zM64 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h1v1h-1zM28 6h1v1h-1zM30 6h1v1h-1zM32 6h1v1h-1zM34 6h1v1h-1zM36 6h1v1h-1zM38 6h1v1h-1zM40 6h1v1h-1zM42 6h1v1h-1zM44 6h1v1h-1zM46 6h1v1h-1zM48 6h1v1h-1zM50 6h1v1h-1zM52 6h1v1h-1zM54 6h1v1h-1zM56 6h1v1h-1zM58 6h7v1h-7zM8 7h1v1h-1zM10 7h3v1h-3zM18 7h1v1h-1zM20 7h2v1h-2zM23 7h2v1h-2zM26 7h5v1h-5zM34 7h1v1h-1zM36 7h6v1h-6zM45 7h1v1h-1zM47 7h2v1h-2zM52 7h3v1h-3zM0 8h1v1h-1zM2 8h2v1h-2zM5 8h3v1h-3zM9 8h1v1h-1zM12 8h6v1h-6zM19 8h4v1h-4zM24 8h1v1h-1zM27 8h1v1h-1zM30 8h6v1h-6zM37 8h6v1h-6zM46 8h1v1h-1zM49 8h7v1h-7zM58 8h1v1h-1zM61 8h1v1h-1zM63 8h2v1h-2zM0 9h1v1h-1zM3 9h1v1h-1zM7 9h4v1h-4zM13 9h1v1h-1zM15 9h4v1h-4zM23 9h2v1h-2zM26 9h1v1h-1zM31 9h1v1h-1zM35 9h1v1h-1zM37 9h1v1h-1zM42 9h1v1h-1zM44 9h1v1h-1zM49 9h1v1h-1zM52 9h1v1h-1zM54 9h4v1h-4zM59 9h6v1h-6zM0 10h1v1h-1zM2 10h3v1h-3zM6 10h1v1h-1zM9 10h2v1h-2zM14 10h1v1h-1zM16 10h1v1h-1zM18 10h1v1h-1zM20 10h2v1h-2zM23 10h8v1h-8zM32 10h1v1h-1zM36 10h2v1h-2zM41 10h3v1h-3zM46 10h1v1h-1zM48 10h1v1h-1zM50 10h3v1h-3zM54 10h1v1h-1zM57 10h1v1h-1zM59 10h1v1h-1zM61 10h3v1h-3zM0 11h1v1h-1zM5 11h1v1h-1zM7 11h1v1h-1zM13 11h1v1h-1zM16 11h4v1h-4zM22 11h1v1h-1zM24 11h1v1h-1zM27 11h2v1h-2zM31 11h1v1h-1zM33 11h5v1h-5zM39 11h1v1h-1zM41 11h3v1h-3zM45 11h1v1h-1zM48 11h1v1h-1zM50 11h1v1h-1zM53 11h2v1h-2zM56 11h4v1h-4zM61 11h1v1h-1zM64 11h1v1h-1zM0 12h2v1h-2zM6 12h3v1h-3zM10 12h1v1h-1zM12 12h4v1h-4zM17 12h1v1h-1zM21 12h1v1h-1zM23 12h2v1h-2zM27 12h2v1h-2zM31 12h1v1h-1zM33 12h4v1h-4zM39 12h1v1h-1zM42 12h1v1h-1zM47 12h3v1h-3zM55 12h1v1h-1zM58 12h3v1h-3zM64 12h1v1h-1zM0 13h1v1h-1zM2 13h1v1h-1zM5 13h1v1h-1zM11 13h3v1h-3zM16 13h2v1h-2zM19 13h2v1h-2zM24 13h2v1h-2zM27 13h1v1h-1zM35 13h1v1h-1zM37 13h2v1h-2zM41 13h1v1h-1zM43 13h2v1h-2zM47 13h5v1h-5zM55 13h3v1h-3zM60 13h2v1h-2zM63 13h2v1h-2zM0 14h1v1h-1zM2 14h2v1h-2zM6 14h2v1h-2zM14 14h2v1h-2zM18 14h1v1h-1zM22 14h2v1h-2zM25 14h1v1h-1zM27 14h1v1h-1zM29 14h1v1h-1zM32 14h1v1h-1zM34 14h2v1h-2zM37 14h1v1h-1zM39 14h1v1h-1zM41 14h2v1h-2zM44 14h1v1h-1zM46 14h6v1h-6zM54 14h3v1h-3zM58 14h3v1h-3zM63 14h2v1h-2zM3 15h3v1h-3zM10 15h1v1h-1zM13 15h1v1h-1zM17 15h2v1h-2zM20 15h2v1h-2zM25 15h1v1h-1zM27 15h1v1h-1zM29 15h2v1h-2zM32 15h1v1h-1zM35 15h3v1h-3zM39 15h1v1h-1zM41 15h1v1h-1zM43 15h2v1h-2zM47 15h2v1h-2zM51 15h1v1h-1zM53 15h1v1h-1zM56 15h1v1h-1zM58 15h1v1h-1zM63 15h2v1h-2zM0 16h1v1h-1zM2 16h1v1h-1zM4 16h1v1h-1zM6 16h1v1h-1zM11 16h7v1h-7zM22 16h3v1h-3zM26 16h8v1h-8zM37 16h3v1h-3zM44 16h1v1h-1zM49 16h3v1h-3zM58 16h1v1h-1zM62 16h2v1h-2zM0 17h2v1h-2zM4 17h1v1h-1zM8 17h2v1h-2zM11 17h1v1h-1zM15 17h7v1h-7zM23 17h1v1h-1zM26 17h1v1h-1zM28 17h3v1h-3zM33 17h3v1h-3zM40 17h2v1h-2zM45 17h4v1h-4zM51 17h2v1h-2zM57 17h4v1h-4zM62 17h2v1h-2zM1 18h1v1h-1zM4 18h1v1h-1zM6 18h1v1h-1zM8 18h2v1h-2zM13 18h2v1h-2zM19 18h1v1h-1zM21 18h1v1h-1zM25 18h1v1h-1zM29 18h1v1h-1zM33 18h1v1h-1zM35 18h3v1h-3zM42 18h2v1h-2zM52 18h1v1h-1zM54 18h2v1h-2zM57 18h2v1h-2zM61 18h1v1h-1zM63 18h1v1h-1zM0 19h2v1h-2zM3 19h1v1h-1zM5 19h1v1h-1zM9 19h1v1h-1zM14 19h2v1h-2zM18 19h1v1h-1zM21 19h2v1h-2zM26 19h1v1h-1zM28 19h2v1h-2zM33 19h1v1h-1zM35 19h1v1h-1zM39 19h1v1h-1zM41 19h2v1h-2zM44 19h1v1h-1zM47 19h1v1h-1zM50 19h1v1h-1zM52 19h1v1h-1zM60 19h5v1h-5zM4 20h1v1h-1zM6 20h1v1h-1zM8 20h1v1h-1zM12 20h2v1h-2zM15 20h1v1h-1zM17 20h1v1h-1zM19 20h1v1h-1zM21 20h4v1h-4zM28 20h1v1h-1zM30 20h2v1h-2zM34 20h2v1h-2zM37 20h4v1h-4zM42 20h1v1h-1zM45 20h1v1h-1zM51 20h2v1h-2zM55 20h2v1h-2zM58 20h2v1h-2zM61 20h1v1h-1zM63 20h2v1h-2zM1 21h3v1h-3zM8 21h2v1h-2zM14 21h5v1h-5zM20 21h1v1h-1zM26 21h1v1h-1zM29 21h1v1h-1zM32 21h2v1h-2zM35 21h1v1h-1zM37 21h1v1h-1zM41 21h3v1h-3zM48 21h2v1h-2zM53 21h3v1h-3zM59 21h1v1h-1zM62 21h3v1h-3zM1 22h3v1h-3zM6 22h2v1h-2zM9 22h4v1h-4zM14 22h2v1h-2zM19 22h1v1h-1zM23 22h1v1h-1zM25 22h2v1h-2zM29 22h2v1h-2zM33 22h3v1h-3zM40 22h1v1h-1zM43 22h2v1h-2zM46 22h1v1h-1zM51 22h1v1h-1zM53 22h1v1h-1zM56 22h1v1h-1zM60 22h2v1h-2zM63 22h1v1h-1zM0 23h4v1h-4zM5 23h1v1h-1zM8 23h1v1h-1zM10 23h1v1h-1zM13 23h4v1h-4zM19 23h1v1h-1zM24 23h1v1h-1zM26 23h2v1h-2zM29 23h1v1h-1zM31 23h2v1h-2zM34 23h3v1h-3zM39 23h1v1h-1zM42 23h1v1h-1zM44 23h2v1h-2zM50 23h1v1h-1zM52 23h3v1h-3zM59 23h2v1h-2zM1 24h1v1h-1zM5 24h4v1h-4zM10 24h1v1h-1zM15 24h1v1h-1zM19 24h2v1h-2zM22 24h1v1h-1zM24 24h1v1h-1zM27 24h2v1h-2zM31 24h1v1h-1zM33 24h1v1h-1zM35 24h2v1h-2zM38 24h1v1h-1zM41 24h3v1h-3zM46 24h4v1h-4zM51 24h1v1h-1zM57 24h1v1h-1zM60 24h1v1h-1zM63 24h1v1h-1zM0 25h1v1h-1zM4 25h2v1h-2zM8 25h3v1h-3zM12 25h1v1h-1zM16 25h2v1h-2zM20 25h1v1h-1zM22 25h1v1h-1zM27 25h1v1h-1zM32 25h2v1h-2zM36 25h4v1h-4zM43 25h3v1h-3zM47 25h2v1h-2zM50 25h2v1h-2zM53 25h1v1h-1zM56 25h1v1h-1zM59 25h2v1h-2zM63 25h2v1h-2zM0 26h1v1h-1zM6 26h2v1h-2zM12 26h1v1h-1zM14 26h1v1h-1zM19 26h3v1h-3zM24 26h1v1h-1zM27 26h2v1h-2zM33 26h1v1h-1zM35 26h2v1h-2zM38 26h1v1h-1zM40 26h5v1h-5zM48 26h4v1h-4zM54 26h1v1h-1zM56 26h2v1h-2zM59 26h1v1h-1zM64 26h1v1h-1zM0 27h1v1h-1zM3 27h2v1h-2zM7 27h1v1h-1zM10 27h5v1h-5zM16 27h1v1h-1zM22 27h7v1h-7zM30 27h3v1h-3zM36 27h2v1h-2zM40 27h3v1h-3zM45 27h5v1h-5zM53 27h3v1h-3zM61 27h1v1h-1zM63 27h2v1h-2zM2 28h3v1h-3zM6 28h3v1h-3zM10 28h2v1h-2zM16 28h1v1h-1zM19 28h1v1h-1zM24 28h1v1h-1zM26 28h1v1h-1zM30 28h1v1h-1zM32 28h1v1h-1zM34 28h2v1h-2zM38 28h1v1h-1zM43 28h2v1h-2zM46 28h1v1h-1zM49 28h1v1h-1zM51 28h1v1h-1zM53 28h1v1h-1zM58 28h2v1h-2zM61 28h1v1h-1zM63 28h1v1h-1zM0 29h1v1h-1zM2 29h3v1h-3zM8 29h3v1h-3zM12 29h6v1h-6zM21 29h1v1h-1zM23 29h1v1h-1zM25 29h3v1h-3zM29 29h3v1h-3zM33 29h3v1h-3zM41 29h1v1h-1zM44 29h1v1h-1zM46 29h1v1h-1zM48 29h1v1h-1zM51 29h3v1h-3zM58 29h4v1h-4zM63 29h1v1h-1zM1 30h1v1h-1zM3 30h7v1h-7zM11 30h1v1h-1zM13 30h1v1h-1zM16 30h1v1h-1zM21 30h4v1h-4zM27 30h9v1h-9zM38 30h3v1h-3zM45 30h2v1h-2zM49 30h3v1h-3zM55 30h6v1h-6zM62 30h1v1h-1zM64 30h1v1h-1zM1 31h2v1h-2zM4 31h1v1h-1zM8 31h6v1h-6zM15 31h1v1h-1zM18 31h1v1h-1zM20 31h4v1h-4zM25 31h6v1h-6zM34 31h1v1h-1zM38 31h2v1h-2zM41 31h1v1h-1zM43 31h2v1h-2zM50 31h2v1h-2zM53 31h1v1h-1zM56 31h1v1h-1zM60 31h1v1h-1zM62 31h1v1h-1zM0 32h5v1h-5zM6 32h1v1h-1zM8 32h2v1h-2zM13 32h3v1h-3zM18 32h6v1h-6zM28 32h3v1h-3zM32 32h1v1h-1zM34 32h1v1h-1zM40 32h2v1h-2zM43 32h1v1h-1zM45 32h2v1h-2zM52 32h2v1h-2zM55 32h2v1h-2zM58 32h1v1h-1zM60 32h1v1h-1zM62 32h1v1h-1zM64 32h1v1h-1zM0 33h1v1h-1zM2 33h3v1h-3zM8 33h5v1h-5zM14 33h2v1h-2zM21 33h1v1h-1zM24 33h2v1h-2zM29 33h2v1h-2zM34 33h3v1h-3zM42 33h2v1h-2zM45 33h1v1h-1zM47 33h2v1h-2zM54 33h1v1h-1zM56 33h1v1h-1zM60 33h1v1h-1zM62 33h2v1h-2zM1 34h1v1h-1zM4 34h6v1h-6zM11 34h1v1h-1zM13 34h1v1h-1zM15 34h4v1h-4zM21 34h1v1h-1zM23 34h3v1h-3zM28 34h8v1h-8zM37 34h2v1h-2zM44 34h2v1h-2zM47 34h1v1h-1zM49 34h2v1h-2zM55 34h8v1h-8zM3 35h1v1h-1zM5 35h1v1h-1zM7 35h2v1h-2zM13 35h1v1h-1zM15 35h4v1h-4zM22 35h1v1h-1zM25 35h4v1h-4zM32 35h1v1h-1zM38 35h2v1h-2zM41 35h6v1h-6zM48 35h1v1h-1zM53 35h1v1h-1zM60 35h1v1h-1zM64 35h1v1h-1zM6 36h3v1h-3zM10 36h2v1h-2zM14 36h2v1h-2zM18 36h1v1h-1zM23 36h1v1h-1zM25 36h4v1h-4zM30 36h2v1h-2zM33 36h2v1h-2zM36 36h1v1h-1zM38 36h1v1h-1zM41 36h1v1h-1zM43 36h1v1h-1zM47 36h2v1h-2zM56 36h1v1h-1zM62 36h1v1h-1zM0 37h1v1h-1zM13 37h2v1h-2zM16 37h2v1h-2zM19 37h6v1h-6zM26 37h2v1h-2zM29 37h4v1h-4zM34 37h3v1h-3zM38 37h2v1h-2zM44 37h2v1h-2zM50 37h1v1h-1zM55 37h3v1h-3zM0 38h1v1h-1zM2 38h2v1h-2zM6 38h1v1h-1zM9 38h2v1h-2zM12 38h1v1h-1zM14 38h3v1h-3zM21 38h1v1h-1zM23 38h1v1h-1zM25 38h1v1h-1zM27 38h9v1h-9zM38 38h1v1h-1zM43 38h1v1h-1zM45 38h2v1h-2zM49 38h1v1h-1zM51 38h1v1h-1zM55 38h5v1h-5zM64 38h1v1h-1zM0 39h1v1h-1zM3 39h3v1h-3zM7 39h1v1h-1zM10 39h1v1h-1zM13 39h2v1h-2zM16 39h1v1h-1zM20 39h1v1h-1zM22 39h1v1h-1zM26 39h4v1h-4zM32 39h2v1h-2zM38 39h3v1h-3zM42 39h1v1h-1zM44 39h1v1h-1zM49 39h1v1h-1zM51 39h2v1h-2zM55 39h1v1h-1zM57 39h5v1h-5zM64 39h1v1h-1zM3 40h4v1h-4zM8 40h2v1h-2zM11 40h1v1h-1zM16 40h2v1h-2zM19 40h1v1h-1zM24 40h6v1h-6zM32 40h1v1h-1zM37 40h3v1h-3zM41 40h1v1h-1zM43 40h3v1h-3zM51 40h1v1h-1zM54 40h1v1h-1zM56 40h2v1h-2zM59 40h1v1h-1zM63 40h2v1h-2zM1 41h1v1h-1zM4 41h2v1h-2zM8 41h3v1h-3zM12 41h1v1h-1zM17 41h2v1h-2zM20 41h3v1h-3zM24 41h2v1h-2zM27 41h2v1h-2zM30 41h1v1h-1zM33 41h2v1h-2zM40 41h2v1h-2zM45 41h3v1h-3zM51 41h1v1h-1zM56 41h1v1h-1zM58 41h2v1h-2zM61 41h2v1h-2zM1 42h2v1h-2zM4 42h3v1h-3zM8 42h1v1h-1zM10 42h1v1h-1zM12 42h1v1h-1zM17 42h1v1h-1zM20 42h1v1h-1zM23 42h2v1h-2zM28 42h1v1h-1zM32 42h2v1h-2zM35 42h2v1h-2zM38 42h1v1h-1zM42 42h2v1h-2zM45 42h2v1h-2zM51 42h1v1h-1zM53 42h1v1h-1zM55 42h2v1h-2zM59 42h2v1h-2zM62 42h1v1h-1zM0 43h1v1h-1zM3 43h3v1h-3zM8 43h5v1h-5zM16 43h2v1h-2zM19 43h1v1h-1zM25 43h3v1h-3zM30 43h1v1h-1zM33 43h1v1h-1zM36 43h3v1h-3zM41 43h2v1h-2zM44 43h1v1h-1zM46 43h5v1h-5zM52 43h2v1h-2zM56 43h1v1h-1zM61 43h2v1h-2zM64 43h1v1h-1zM0 44h2v1h-2zM4 44h1v1h-1zM6 44h2v1h-2zM10 44h2v1h-2zM13 44h1v1h-1zM15 44h1v1h-1zM18 44h1v1h-1zM21 44h3v1h-3zM25 44h1v1h-1zM27 44h1v1h-1zM29 44h1v1h-1zM31 44h1v1h-1zM33 44h1v1h-1zM35 44h1v1h-1zM39 44h5v1h-5zM51 44h3v1h-3zM55 44h3v1h-3zM61 44h1v1h-1zM63 44h1v1h-1zM0 45h2v1h-2zM7 45h5v1h-5zM15 45h2v1h-2zM20 45h2v1h-2zM25 45h1v1h-1zM31 45h4v1h-4zM36 45h1v1h-1zM39 45h5v1h-5zM48 45h2v1h-2zM52 45h3v1h-3zM57 45h3v1h-3zM62 45h1v1h-1zM64 45h1v1h-1zM0 46h2v1h-2zM4 46h1v1h-1zM6 46h1v1h-1zM8 46h1v1h-1zM12 46h2v1h-2zM17 46h1v1h-1zM21 46h2v1h-2zM25 46h3v1h-3zM37 46h1v1h-1zM43 46h1v1h-1zM45 46h1v1h-1zM48 46h1v1h-1zM51 46h1v1h-1zM53 46h2v1h-2zM57 46h4v1h-4zM63 46h1v1h-1zM3 47h3v1h-3zM7 47h3v1h-3zM11 47h1v1h-1zM13 47h1v1h-1zM17 47h8v1h-8zM29 47h2v1h-2zM32 47h2v1h-2zM37 47h1v1h-1zM39 47h2v1h-2zM42 47h2v1h-2zM47 47h4v1h-4zM52 47h1v1h-1zM54 47h1v1h-1zM58 47h4v1h-4zM63 47h2v1h-2zM1 48h1v1h-1zM6 48h2v1h-2zM9 48h3v1h-3zM13 48h2v1h-2zM18 48h1v1h-1zM23 48h2v1h-2zM28 48h2v1h-2zM34 48h3v1h-3zM38 48h1v1h-1zM41 48h3v1h-3zM48 48h2v1h-2zM56 48h3v1h-3zM60 48h1v1h-1zM63 48h1v1h-1zM0 49h1v1h-1zM5 49h1v1h-1zM13 49h2v1h-2zM16 49h2v1h-2zM21 49h1v1h-1zM23 49h1v1h-1zM29 49h1v1h-1zM31 49h3v1h-3zM35 49h4v1h-4zM40 49h1v1h-1zM44 49h2v1h-2zM47 49h1v1h-1zM49 49h3v1h-3zM57 49h1v1h-1zM62 49h3v1h-3zM0 50h2v1h-2zM5 50h2v1h-2zM8 50h1v1h-1zM11 50h1v1h-1zM13 50h1v1h-1zM22 50h3v1h-3zM26 50h2v1h-2zM29 50h2v1h-2zM34 50h4v1h-4zM39 50h1v1h-1zM43 50h1v1h-1zM45 50h5v1h-5zM51 50h2v1h-2zM55 50h1v1h-1zM57 50h2v1h-2zM60 50h3v1h-3zM64 50h1v1h-1zM1 51h2v1h-2zM4 51h1v1h-1zM9 51h2v1h-2zM12 51h1v1h-1zM15 51h3v1h-3zM22 51h1v1h-1zM25 51h1v1h-1zM29 51h3v1h-3zM33 51h1v1h-1zM36 51h1v1h-1zM38 51h1v1h-1zM41 51h2v1h-2zM46 51h2v1h-2zM50 51h3v1h-3zM54 51h4v1h-4zM59 51h1v1h-1zM61 51h1v1h-1zM0 52h1v1h-1zM2 52h2v1h-2zM5 52h3v1h-3zM11 52h1v1h-1zM13 52h2v1h-2zM16 52h2v1h-2zM19 52h1v1h-1zM21 52h1v1h-1zM23 52h4v1h-4zM30 52h1v1h-1zM33 52h2v1h-2zM38 52h2v1h-2zM43 52h4v1h-4zM49 52h3v1h-3zM53 52h1v1h-1zM56 52h1v1h-1zM58 52h3v1h-3zM62 52h1v1h-1zM64 52h1v1h-1zM0 53h1v1h-1zM3 53h1v1h-1zM8 53h3v1h-3zM12 53h1v1h-1zM15 53h5v1h-5zM22 53h1v1h-1zM27 53h2v1h-2zM30 53h1v1h-1zM34 53h2v1h-2zM40 53h2v1h-2zM43 53h1v1h-1zM45 53h2v1h-2zM48 53h1v1h-1zM51 53h1v1h-1zM53 53h1v1h-1zM55 53h5v1h-5zM63 53h2v1h-2zM2 54h2v1h-2zM5 54h2v1h-2zM11 54h1v1h-1zM14 54h1v1h-1zM17 54h2v1h-2zM20 54h1v1h-1zM22 54h2v1h-2zM25 54h3v1h-3zM29 54h1v1h-1zM32 54h1v1h-1zM35 54h1v1h-1zM37 54h2v1h-2zM41 54h3v1h-3zM45 54h3v1h-3zM50 54h1v1h-1zM0 55h1v1h-1zM3 55h1v1h-1zM9 55h1v1h-1zM14 55h1v1h-1zM16 55h3v1h-3zM21 55h1v1h-1zM24 55h1v1h-1zM26 55h2v1h-2zM30 55h1v1h-1zM32 55h1v1h-1zM35 55h2v1h-2zM40 55h2v1h-2zM45 55h1v1h-1zM48 55h2v1h-2zM54 55h2v1h-2zM57 55h2v1h-2zM60 55h3v1h-3zM64 55h1v1h-1zM1 56h2v1h-2zM4 56h1v1h-1zM6 56h2v1h-2zM9 56h1v1h-1zM11 56h3v1h-3zM17 56h1v1h-1zM19 56h1v1h-1zM21 56h2v1h-2zM27 56h1v1h-1zM30 56h6v1h-6zM39 56h4v1h-4zM46 56h1v1h-1zM50 56h1v1h-1zM52 56h1v1h-1zM54 56h9v1h-9zM8 57h2v1h-2zM11 57h2v1h-2zM15 57h2v1h-2zM20 57h1v1h-1zM23 57h1v1h-1zM26 57h1v1h-1zM29 57h2v1h-2zM34 57h1v1h-1zM36 57h2v1h-2zM39 57h1v1h-1zM41 57h2v1h-2zM44 57h1v1h-1zM49 57h1v1h-1zM52 57h3v1h-3zM56 57h1v1h-1zM60 57h1v1h-1zM64 57h1v1h-1zM0 58h7v1h-7zM8 58h3v1h-3zM13 58h2v1h-2zM17 58h1v1h-1zM19 58h1v1h-1zM22 58h1v1h-1zM24 58h2v1h-2zM28 58h1v1h-1zM30 58h1v1h-1zM32 58h1v1h-1zM34 58h1v1h-1zM39 58h1v1h-1zM41 58h3v1h-3zM46 58h1v1h-1zM48 58h1v1h-1zM52 58h5v1h-5zM58 58h1v1h-1zM60 58h2v1h-2zM63 58h1v1h-1zM0 59h1v1h-1zM6 59h1v1h-1zM8 59h1v1h-1zM12 59h1v1h-1zM15 59h1v1h-1zM18 59h2v1h-2zM21 59h1v1h-1zM27 59h2v1h-2zM30 59h1v1h-1zM34 59h1v1h-1zM39 59h1v1h-1zM41 59h2v1h-2zM46 59h1v1h-1zM49 59h1v1h-1zM52 59h2v1h-2zM56 59h1v1h-1zM60 59h1v1h-1zM63 59h1v1h-1zM0 60h1v1h-1zM2 60h3v1h-3zM6 60h1v1h-1zM9 60h2v1h-2zM12 60h1v1h-1zM15 60h2v1h-2zM18 60h3v1h-3zM23 60h2v1h-2zM26 60h1v1h-1zM29 60h6v1h-6zM36 60h2v1h-2zM39 60h1v1h-1zM43 60h1v1h-1zM45 60h1v1h-1zM48 60h1v1h-1zM50 60h1v1h-1zM53 60h8v1h-8zM62 60h1v1h-1zM64 60h1v1h-1zM0 61h1v1h-1zM2 61h3v1h-3zM6 61h1v1h-1zM8 61h2v1h-2zM11 61h1v1h-1zM14 61h3v1h-3zM19 61h2v1h-2zM29 61h3v1h-3zM34 61h2v1h-2zM37 61h2v1h-2zM40 61h1v1h-1zM45 61h1v1h-1zM49 61h4v1h-4zM55 61h1v1h-1zM57 61h4v1h-4zM0 62h1v1h-1zM2 62h3v1h-3zM6 62h1v1h-1zM8 62h3v1h-3zM12 62h2v1h-2zM15 62h1v1h-1zM18 62h2v1h-2zM21 62h8v1h-8zM30 62h2v1h-2zM38 62h2v1h-2zM42 62h2v1h-2zM46 62h5v1h-5zM52 62h1v1h-1zM54 62h2v1h-2zM57 62h3v1h-3zM64 62h1v1h-1zM0 63h1v1h-1zM6 63h1v1h-1zM11 63h4v1h-4zM16 63h1v1h-1zM18 63h2v1h-2zM24 63h2v1h-2zM27 63h1v1h-1zM31 63h2v1h-2zM36 63h4v1h-4zM41 63h1v1h-1zM46 63h1v1h-1zM48 63h4v1h-4zM53 63h1v1h-1zM60 63h1v1h-1zM63 63h1v1h-1zM0 64h7v1h-7zM8 64h1v1h-1zM12 64h2v1h-2zM15 64h1v1h-1zM18 64h1v1h-1zM20 64h2v1h-2zM23 64h1v1h-1zM25 64h3v1h-3zM32 64h1v1h-1zM34 64h1v1h-1zM36 64h1v1h-1zM39 64h5v1h-5zM46 64h1v1h-1zM48 64h1v1h-1zM51 64h6v1h-6zM58 64h1v1h-1zM61 64h1v1h-1zM63 64h1v1h-1z" fill="#222428"></path>
+        </svg>
+      </div>
+      <div>
+        <h3>Save my contact — it will come in handy</h3>
+        <p>Point your phone camera at the QR code: it adds my phone, email, Telegram and LinkedIn link to your contacts. When you need an independent view on credit risk, a portfolio or a risk strategy, I'll be one tap away.</p>
+        <div class="save__row">
+          <button class="btn btn--primary copy" type="button"
+            data-card="Denis Davydov — risk management" data-plabel="Phone" data-mlabel="E-mail"
+            data-ok="Contact copied — paste it into your notes or contacts" data-fail="Copying failed — please scan the QR code" data-done="Copied"
+            data-idle="Copy contact" data-hint="phone · email · Telegram · LinkedIn">Copy contact</button>
+          <span class="save__hint">phone · email · Telegram · LinkedIn</span>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Denis Davydov · risk management</span><span>Moscow</span>
+      <a href="https://t.me/denisdev" target="_blank" rel="noopener">@denisdev</a>
+      <a href="https://www.linkedin.com/in/denisdavydovbanking/" target="_blank" rel="noopener">linkedin.com/in/denisdavydovbanking</a>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var PHONE = "+7 919 729-68-47", MAIL = "denisdavydov.dd@gmail.com", TG = "@denisdev", LI = "https://www.linkedin.com/in/denisdavydovbanking/";
+  document.querySelectorAll('.reveal').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if(!btn.classList.contains('is-shown')){
+        btn.classList.add('is-shown');
+        btn.setAttribute('aria-label', btn.querySelector('.reveal__val').textContent.trim());
+      } else { window.location.href = btn.dataset.href; }
+    });
+  });
+  document.querySelectorAll('.copy').forEach(function(btn){
+    var hint = btn.parentNode.querySelector('.save__hint'), d = btn.dataset;
+    var text = d.card + '\n' + d.plabel + ': ' + PHONE + '\n' + d.mlabel + ': ' + MAIL
+             + '\nTelegram: ' + TG + '\nLinkedIn: ' + LI;
+    btn.addEventListener('click', function(){
+      var done = function(ok){
+        hint.textContent = ok ? d.ok : d.fail;
+        btn.textContent = ok ? d.done : d.idle;
+        setTimeout(function(){ btn.textContent = d.idle; hint.textContent = d.hint; }, 4000);
+      };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){done(true)}, function(){done(false)});
+      } else { done(false); }
+    });
+  });
+  // Inside the claude.ai artifact viewer a plain download link is inert:
+  // route the CV button through the downloads capability when it is available.
+  (async function(){
+    var dl = null;
+    try { dl = (window.claude && window.claude.use) ? await window.claude.use('downloads') : null; } catch(e){ dl = null; }
+    if(!dl) return;
+    document.querySelectorAll('a[data-cv]').forEach(function(a){
+      a.addEventListener('click', function(ev){
+        ev.preventDefault();
+        fetch(a.getAttribute('href')).then(function(r){ return r.blob(); }).then(function(blob){
+          return dl.save({filename: a.dataset.cv, data: blob});
+        }).catch(function(){});
+      });
+    });
+  })();
+
+  var vers = document.querySelectorAll('.ver');
+  if(vers.length > 1){
+    var set = function(lang, remember){
+      vers.forEach(function(v){ v.hidden = (v.dataset.lang !== lang); });
+      document.querySelectorAll('[data-setlang]').forEach(function(b){
+        b.classList.toggle('is-on', b.dataset.setlang === lang);
+      });
+      document.documentElement.lang = lang;
+      if(remember){ try{ localStorage.setItem('ddLang', lang); }catch(e){} }
+      window.scrollTo({top:0, behavior:'auto'});
+    };
+    document.querySelectorAll('[data-setlang]').forEach(function(b){
+      b.addEventListener('click', function(){ set(b.dataset.setlang, true); });
+    });
+    var saved = null; try{ saved = localStorage.getItem('ddLang'); }catch(e){}
+    if(saved === 'en'){ set('en', false); }
+  }
+})();
+</script>
+</body>
+</html>
